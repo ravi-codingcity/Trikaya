@@ -25,6 +25,20 @@ import Services_6 from "./src/assets/Services_6.jpg";
 import Services_7 from "./src/assets/Services_7.jpg";
 import Services_8 from "./src/assets/Services_8.jpg";
 import Services from "./src/Pages/Services";
+import Logo_1 from "./src/assets/Logo/Logo_1.png";
+import Logo_2 from "./src/assets/Logo/Logo_2.png";
+import Logo_3 from "./src/assets/Logo/Logo_3.png";
+import Logo_4 from "./src/assets/Logo/Logo_4.png";
+import Logo_5 from "./src/assets/Logo/Logo_5.png";
+import Logo_6 from "./src/assets/Logo/Logo_6.png";
+import Logo_7 from "./src/assets/Logo/Logo_7.png";
+import Logo_8 from "./src/assets/Logo/Logo_8.jpg";
+import testimonial_video_1 from "./src/assets/testimonials/testimonials_1.mp4";
+import testimonial_video_2 from "./src/assets/testimonials/testimonials_2.mp4";
+import testimonial_video_3 from "./src/assets/testimonials/testimonials_3.mp4";
+import testimonial_video_4 from "./src/assets/testimonials/testimonials_4.mp4";
+import testimonial_video_5 from "./src/assets/testimonials/testimonials_5.mp4";
+
 
 
 const Homepage = () => {
@@ -34,7 +48,7 @@ const Homepage = () => {
       title: "RSVP Management",
       description:
         "Seamless guest management and response tracking for your events.",
-        link: "/services/rsvp-management"
+      link: "/services/rsvp-management",
     },
     {
       image: Services_2,
@@ -85,30 +99,61 @@ const Homepage = () => {
     { number: "10+", label: "Years Experience" },
   ];
 
+const Clients_logos = [
+  {
+    image: Logo_1,
+    alt: "Client Logo 1",
+  },
+  {
+    image: Logo_2,
+    alt: "Client Logo 2",
+  },
+  {
+    image: Logo_3,
+    alt: "Client Logo 3",
+  },
+  {
+    image: Logo_4,
+    alt: "Client Logo 4",
+  },
+   {
+    image: Logo_5,
+    alt: "Client Logo 5",
+  },
+  {
+    image: Logo_6,
+    alt: "Client Logo 6",
+  },
+  {
+    image: Logo_7,
+    alt: "Client Logo 7",
+  },
+  {
+    image: Logo_8,
+    alt: "Client Logo 8",
+  },
+];
+
   const testimonials = [
     {
-      name: "Sarah & Michael Thompson",
-      event: "Destination Wedding - Tuscany",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
-      rating: 5,
-      text: "Trikaya Events turned our dream wedding into reality. Every detail was perfect, from the venue selection to the final dance. Absolutely magical!",
+     video: testimonial_video_1,
+      name: "John Doe",
     },
     {
-      name: "Corporate Client - TechCorp",
-      event: "Annual Gala - Dubai",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
-      rating: 5,
-      text: "Professional, creative, and flawless execution. Our annual gala was the talk of the industry. Highly recommend their services!",
+      video: testimonial_video_2,
+      name: "Jane Smith",
     },
     {
-      name: "Jennifer & David Chen",
-      event: "Engagement Party - Maldives",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
-      rating: 5,
-      text: "From planning to execution, everything was seamless. The team went above and beyond to make our engagement unforgettable.",
+      video: testimonial_video_3,
+      name: "Alice Johnson",
+    },
+      {
+      video: testimonial_video_4,
+      name: "Jane Smith",
+    },
+    {
+      video: testimonial_video_5,
+      name: "Alice Johnson",
     },
   ];
 
@@ -117,8 +162,8 @@ const Homepage = () => {
     Banner2,
     Banner3,
     Banner4,
-   Services_5, // Using the banners again for a fuller gallery
-   Services_6,
+    Services_5, // Using the banners again for a fuller gallery
+    Services_6,
   ];
 
   const whyChooseUs = [
@@ -294,7 +339,7 @@ const Homepage = () => {
                 key={index}
                 className="text-center group will-change-transform"
               >
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-red-500 mb-2  transition-colors duration-200">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-red-500 mb-2 transition-colors duration-200">
                   {stat.number}
                 </div>
                 <div className="text-black text-sm sm:text-base lg:text-lg font-medium">
@@ -306,12 +351,12 @@ const Homepage = () => {
         </div>
       </section>
 
-      {/* Testimonials Section - What Our Clients Say */}
+      {/* Testimonials Section */}
       <section className="py-20 bg-white w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-blue-900 mb-6">
-              What Our Clients Say
+              Testimonials
             </h2>
             <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Don't just take our word for it. Here's what our satisfied clients
@@ -320,43 +365,49 @@ const Homepage = () => {
             <div className="w-16 h-0.5 bg-blue-900 mx-auto mt-6"></div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 lg:gap-8">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-white p-6 lg:p-8 rounded-xl border border-gray-200 hover:border-luxury-gold transition-all duration-300 group relative shadow-sm hover:shadow-lg will-change-transform"
+                className="rounded-xl border border-gray-200 hover:border-luxury-gold transition-all duration-300 group relative shadow-sm hover:shadow-lg will-change-transform"
               >
-                <div className="absolute top-4 right-4 text-gray-200 group-hover:text-luxury-gold/30 transition-colors duration-200">
-                  <Quote size={32} />
-                </div>
+                <video
+                  src={testimonial.video}
+                  className="w-full h-auto rounded-lg border border-gray-200"
+                  controls
+                  controlsList="nodownload"
+                  unmuted
+                  loop
+                  playsInline
+                  data-testimonial-video
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                <div className="flex items-center mb-6">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-14 h-14 rounded-full object-cover mr-4 border-2 border-gray-100"
-                  />
-                  <div>
-                    <h4 className="text-luxury-navy font-semibold text-lg">
-                      {testimonial.name}
-                    </h4>
-                    <p className="text-gray-500 text-sm">{testimonial.event}</p>
-                  </div>
-                </div>
+      {/* Our Clients */}
+      <section className="py-16 bg-gray-100 w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-luxury-navy mb-4">
+              Our Clients
+            </h2>
+            <div className="w-16 h-0.5 bg-blue-900 mx-auto mt-4"></div>
+          </div>
 
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      className="text-luxury-gold fill-current"
-                    />
-                  ))}
-                </div>
-
-                <p className="text-gray-600 leading-relaxed italic">
-                  "{testimonial.text}"
-                </p>
+          <div className="flex flex-wrap flex-row gap-6 lg:gap-8 m-auto justify-center">
+            {Clients_logos.map((logo, index) => (
+              <div
+                key={index}
+                className="text-center group will-change-transform"
+              >
+                <img
+                  src={logo.image}
+                  alt={logo.alt}
+                  className="mx-auto border h-24 w-auto transition-transform duration-300 group-hover:scale-110"
+                />
               </div>
             ))}
           </div>
@@ -375,8 +426,6 @@ const Homepage = () => {
         </div>
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
           <div>
-           
-
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">
               Ready to Create Magic?
             </h2>
@@ -397,9 +446,7 @@ const Homepage = () => {
             <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div className="text-white">
                 <Calendar className="text-white mx-auto mb-3" size={40} />
-                <h4 className="text-lg font-semibold">
-                  Free Consultation
-                </h4>
+                <h4 className="text-lg font-semibold">Free Consultation</h4>
                 <p className="text-gray-300">No commitment, just ideas</p>
               </div>
               <div className="text-white">
