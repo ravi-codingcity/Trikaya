@@ -111,7 +111,7 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div>
             <h1 className="text-3xl md:text-5xl font-bold text-luxury-navy mb-6">
-              Our <span className="text-black">Premium</span> Services
+              Our Premium Services
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">
               From intimate gatherings to grand celebrations, we offer comprehensive event management solutions tailored to your unique vision and requirements.
@@ -127,7 +127,7 @@ const Services = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:border-luxury-gold hover:shadow-xl transition-all duration-300 group"
+                className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:border-blue-900 hover:shadow-xl transition-all duration-300 group"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img 
@@ -136,13 +136,13 @@ const Services = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 text-luxury-gold group-hover:scale-110 transition-transform duration-300">
+                  <div className="absolute bottom-4 left-4 text-white group-hover:scale-110 transition-transform duration-300">
                     <service.icon size={40} />
                   </div>
                 </div>
                 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-luxury-navy group-hover:text-luxury-gold transition-colors duration-300 mb-3">
+                  <h3 className="text-xl font-bold text-black group-hover:text-blue-900 transition-colors duration-300 mb-3">
                     {service.title}
                   </h3>
                   
@@ -153,7 +153,7 @@ const Services = () => {
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-500 text-sm">
-                        <span className="w-1.5 h-1.5 bg-luxury-gold rounded-full mr-3 flex-shrink-0"></span>
+                        <span className="w-1.5 h-1.5 bg-red-600 rounded-full mr-3 flex-shrink-0"></span>
                         {feature}
                       </li>
                     ))}
@@ -162,13 +162,13 @@ const Services = () => {
                   {service.link ? (
                     <Link
                       to={service.link}
-                      className="w-full bg-luxury-gold/10 hover:bg-luxury-gold hover:text-white text-luxury-gold border border-luxury-gold rounded-lg py-2.5 font-semibold transition-all duration-300 text-sm inline-block text-center"
+                      className="w-full bg-red-600/10 hover:bg-red-600 hover:text-white text-red-600 border border-red-600 rounded-lg py-2.5 font-semibold transition-all duration-300 text-sm inline-block text-center"
                     >
                       Learn More
                     </Link>
                   ) : (
                     <button
-                      className="w-full bg-luxury-gold/10 hover:bg-luxury-gold hover:text-white text-luxury-gold border border-luxury-gold rounded-lg py-2.5 font-semibold transition-all duration-300 text-sm"
+                      className="w-full bg-red-600/10 hover:bg-red-600 hover:text-white text-red-600 border border-red-600 rounded-lg py-2.5 font-semibold transition-all duration-300 text-sm"
                     >
                       Learn More
                     </button>
@@ -185,7 +185,7 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-luxury-navy mb-6">
-              Our <span className="text-luxury-gold">Process</span>
+              Our Process
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We follow a proven process to ensure every detail is perfect
@@ -201,9 +201,9 @@ const Services = () => {
             ].map((process, index) => (
               <div
                 key={index}
-                className="text-center bg-gray-100 p-6 rounded-xl border border-gray-100 hover:border-luxury-gold hover:shadow-md transition-all duration-300"
+                className="text-center bg-gray-100 p-6 rounded-xl border border-gray-100 hover:border-red-600 hover:shadow-md transition-all duration-300"
               >
-                <div className="text-6xl font-bold text-luxury-gold  mb-4">
+                <div className="text-6xl font-bold text-red-600  mb-3">
                   {process.step}
                 </div>
                 <h3 className="text-2xl font-semibold text-luxury-navy mb-3">
@@ -230,7 +230,7 @@ const Services = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                className="bg-luxury-gold hover:bg-luxury-darkGold text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="bg-blue-900 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Get Free Consultation
               </button>

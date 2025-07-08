@@ -12,6 +12,15 @@ import {
 } from "lucide-react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import director_1 from "../Assets/director/ravi_verma.jpeg";
+import director_2 from "../Assets/director/azam.jpeg";
+import director_3 from "../Assets/director/bhupender.jpeg";
+import director_4 from "../Assets/director/aqib_k.jpeg";
+import team_1 from "../Assets/teams/aryan.jpeg";
+import team_2 from "../Assets/teams/raghav.jpeg";
+import team_3 from "../Assets/teams/ashish.jpeg";
+import team_4 from "../Assets/teams/anusha.jpeg";
+import team_6 from "../Assets/teams/maroof.jpeg";
 
 const AboutUs = () => {
   const values = [
@@ -53,30 +62,53 @@ const AboutUs = () => {
     }
   };
 
-  const team = [
+  const directors = [
     {
-      name: "Michael Chen",
-      role: "Operations Director",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      description:
-        "Michael ensures seamless execution with his expertise in logistics and vendor management.",
+      name: "Ravi Verma",
+      role: "Director",
+      image: director_1,
     },
     {
-      name: "Emma Rodriguez",
-      role: "Design & Styling Lead",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      description:
-        "Emma transforms spaces into magical environments with her exceptional design sensibilities.",
+      name: "Azam Abbasi ",
+      role: "Director",
+      image: director_2,
     },
     {
-      name: "David Thompson",
-      role: "Client Relations Manager",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      description:
-        "David ensures every client feels heard, valued, and completely satisfied with our services.",
+      name: "Bhupender Singh Lohia ",
+      role: "Director",
+      image: director_3,
+    },
+    {
+      name: "Aqib Khan",
+      role: "Director",
+      image: director_4,
+    },
+  ];
+
+const team = [
+    {
+      name: "Aryan Keshwani",
+      image: team_1,
+    },
+    {
+      name: "Raghav Rathi",
+      image: team_2,
+    },
+    {
+      name: "Ashish Kumar",
+      image: team_3,
+    },
+    {
+      name: "Anusha Vasandani",
+      image: team_4,
+    },
+     {
+      name: "Anuj Saraswat",
+      image: team_6,
+    },
+     {
+      name: "Maroof Khan",
+      image: team_6,
     },
   ];
 
@@ -101,7 +133,7 @@ const AboutUs = () => {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-2xl md:text-5xl font-bold text-luxury-navy mb-6">
-                Trikaya <span className="text-luxury-gold">Events</span>
+                Trikaya Events
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 We love what we do and we always do more than expected. We take
@@ -116,7 +148,7 @@ const AboutUs = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => scrollToSection("our-story")}
-                  className="bg-luxury-gold hover:bg-luxury-darkGold text-white px-8 py-4 rounded-full font-semibold transition-all duration-300"
+                  className="bg-blue-900 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300"
                 >
                   Our Story
                 </motion.button>
@@ -124,7 +156,7 @@ const AboutUs = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => scrollToSection("meet-our-team")}
-                  className="border-2 border-luxury-gold text-luxury-gold hover:bg-luxury-gold hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300"
+                  className="border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300"
                 >
                   Meet Our Team
                 </motion.button>
@@ -159,9 +191,9 @@ const AboutUs = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-luxury-gold transition-all duration-300"
+                className="text-center bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-blue-900 transition-all duration-300"
               >
-                <div className="text-luxury-gold mb-4 flex justify-center">
+                <div className="text-red-600 mb-4 flex justify-center">
                   <stat.icon size={48} />
                 </div>
                 <div className="text-4xl md:text-5xl font-bold text-luxury-navy mb-2">
@@ -196,7 +228,7 @@ const AboutUs = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-luxury-navy mb-6">
-                About <span className="text-luxury-gold">Us</span>
+                About Us
               </h2>
               <p className="text-gray-600 text-lg mb-6 leading-relaxed">
                 We are Trikaya Events, we are a a client-focused event
@@ -231,7 +263,7 @@ const AboutUs = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-luxury-navy mb-6">
-              Our <span className="text-luxury-gold">Values</span>
+              Our Values
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               The principles that guide everything we do
@@ -248,7 +280,7 @@ const AboutUs = () => {
                 whileHover={{ y: -10 }}
                 className="text-center bg-white p-8 rounded-xl border border-gray-100 hover:border-luxury-gold hover:shadow-md transition-all duration-300"
               >
-                <div className="text-luxury-gold mb-6 flex justify-center">
+                <div className="text-red-600 mb-6 flex justify-center">
                   <value.icon size={48} />
                 </div>
                 <h3 className="text-2xl font-semibold text-luxury-navy mb-4">
@@ -263,7 +295,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Directors */}
       <section id="meet-our-team" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
@@ -273,14 +305,59 @@ const AboutUs = () => {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-luxury-navy mb-6">
-              Meet Our <span className="text-luxury-gold">Team</span>
+              Directors
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               The passionate professionals behind every extraordinary event
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {directors.map((member, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -10 }}
+                className="text-center group bg-gray-100 rounded-xl border border-gray-100 hover:border-luxury-gold hover:shadow-md transition-all duration-300"
+              >
+                <div className="relative mb-3 overflow-hidden rounded-xl">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <h3 className="text-lg font-semibold text-black mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-blue-900 font-medium mb-2">{member.role}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+ {/* Team Section */}
+      <section id="meet-our-team" className="pb-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-luxury-navy mb-6">
+              Our Team
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              The passionate professionals behind every extraordinary event
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {team.map((member, index) => (
               <motion.div
                 key={index}
@@ -288,30 +365,25 @@ const AboutUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="text-center group bg-gray-50 p-6 rounded-xl border border-gray-100 hover:border-luxury-gold hover:shadow-md transition-all duration-300"
+                className="text-center group rounded-xl   transition-all duration-300"
               >
-                <div className="relative mb-6 overflow-hidden rounded-xl">
+                <div className="relative mb-3 overflow-hidden rounded-xl">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <h3 className="text-xl font-semibold text-luxury-navy mb-2">
+                <h3 className="text-base font-semibold text-black mb-1">
                   {member.name}
                 </h3>
-                <p className="text-luxury-gold font-medium mb-3">
-                  {member.role}
-                </p>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {member.description}
-                </p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-luxury-navy to-luxury-green">
@@ -332,7 +404,7 @@ const AboutUs = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-luxury-gold hover:bg-luxury-darkGold text-white px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg"
+                className="bg-white hover:bg-blue-900 text-blue-900 hover:text-white px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg"
               >
                 Contact Us
               </motion.button>

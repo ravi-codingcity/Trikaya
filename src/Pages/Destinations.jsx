@@ -7,7 +7,8 @@ import {
   Users,
   Filter,
   Search,
-  ArrowRight
+  ArrowRight,
+  Globe
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navbar from '../Components/Navbar';
@@ -123,9 +124,20 @@ const Destinations = () => {
             <h1 className="text-2xl md:text-5xl font-bold text-luxury-navy mb-6">
               Dream <span className="text-luxury-gold">Destinations</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto mb-1">
+            <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto mb-6">
               Discover breathtaking venues around the world where your perfect celebration awaits.
             </p>
+            
+            <Link to="/destinations/map">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+                className="bg-luxury-gold hover:bg-luxury-darkGold text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 inline-flex items-center space-x-2"
+              >
+                <Globe size={20} />
+                <span>View Interactive World Map</span>
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </section>

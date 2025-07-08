@@ -90,7 +90,7 @@ const ContactUs = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-2xl md:text-5xl font-bold text-luxury-navy mb-6">
-              Get In <span className="text-luxury-gold">Touch</span>
+              Get In Touch
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">
               Ready to start planning your dream event? We're here to bring your
@@ -112,7 +112,7 @@ const ContactUs = () => {
               className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
             >
               <div className="flex items-center mb-5">
-                <MessageCircle className="text-luxury-gold mr-4" size={32} />
+                <MessageCircle className="text-red-600 mr-4" size={32} />
                 <h2 className="text-3xl font-bold text-luxury-navy">
                   Send us a Message
                 </h2>
@@ -215,7 +215,7 @@ const ContactUs = () => {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-luxury-gold hover:bg-luxury-darkGold text-white py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                  className="w-full bg-blue-900 hover:bg-blue-700 text-white py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-2"
                 >
                   <Send size={20} />
                   <span>Send Message</span>
@@ -243,7 +243,7 @@ const ContactUs = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white p-6 rounded-xl border border-gray-100 hover:border-luxury-gold hover:shadow-md transition-all duration-300"
+                    className="bg-white p-6 rounded-xl border border-gray-100 hover:border-blue-900 hover:shadow-md transition-all duration-300"
                   >
                     <div className="flex items-start space-x-4">
                       <div
@@ -361,7 +361,7 @@ const ContactUs = () => {
                   <h3 className="text-lg font-semibold text-luxury-navy">
                     {faq.question}
                   </h3>
-                  <span className={`text-luxury-gold transition-transform duration-300 ${openFaqs[index] ? 'rotate-180' : ''}`}>
+                  <span className={`text-red-600 transition-transform duration-300 ${openFaqs[index] ? 'rotate-180' : ''}`}>
                     ▼
                   </span>
                 </button>
