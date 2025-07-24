@@ -12,143 +12,137 @@ import {
   Sun,
   Thermometer,
   ArrowLeft,
+  Waves,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import Weather from "../../assets/Weather.avif";
-import agra from "../../assets/agra.png";
-import amarvillas_agra from "../../assets/destination/amarvillas.jpg";
-import itcmughal_agra from "../../assets/destination/itcmughal_agra.png";
-import jaypee_agra from "../../assets/destination/jaypee_agra.jpg";
-import tajhotel_agra from "../../assets/destination/tajhotel_agra.jpg";
-import marriott_agra from "../../assets/destination/marriott_agra.jpg";
-import trident_agra from "../../assets/destination/trident_agra.jpg";
+import hyatt from "../../assets/destination/goa/hyatt.jpg";
+import taj from "../../assets/destination/goa/taj.jpg";
+import tajfort from "../../assets/destination/goa/tajfort.jpg";
+import rejis from "../../assets/destination/goa/rejis.jpg";
+import itcgrand from "../../assets/destination/goa/itcgrand.jpg";
+import W from "../../assets/destination/goa/W.jpg"; // Ensure you have the correct path to the image
 
-function Agra() {
+function Goa() {
   const hotels = [
     {
       id: 1,
-      name: "Amar Vilas",
-      rooms: 102,
-      eventSpaces: 9,
+      name: "Grand Hyatt",
+      rooms: 314,
+      eventSpaces: 4,
       description:
-        "Having an uninterrupted view of the monument of love - Taj Mahal, The Oberoi Amarvillas adds the essence of regal touch and splendour to your wedding celebration!",
-      image:
-        amarvillas_agra,
+        "Get hitched by the sea with sunset as your backdrop and sea breeze as your guest at Grand Hyatt, Goa!",
+      image: hyatt,
       features: [
-        "Taj Mahal View",
-        "Regal Touch",
-        "Luxury Suites",
-        "Splendid Architecture",
+        "Sea Side Wedding",
+        "Sunset Backdrop",
+        "Sea Breeze Setting",
+        "Beachfront Location",
       ],
     },
     {
       id: 2,
-      name: "ITC Mughal",
-      rooms: 233,
-      eventSpaces: 4,
+      name: "Taj Exotica",
+      rooms: 140,
+      eventSpaces: 6,
       description:
-        "The ITC Mughal, Agra is where royalty and culture of Indian history come together. An extravagant wedding at this magnificent property is a dream come true!",
-      image:
-        itcmughal_agra,
+        "Taj Exotica Resort, Goa has lush green gardens and grand indoor venues to make you and your guests fall in love and host the wedding you wished for!",
+      image: taj,
       features: [
-        "Royal Heritage",
-        "Cultural Ambiance",
-        "Magnificent Property",
-        "Historical Significance",
+        "Lush Green Gardens",
+        "Grand Indoor Venues",
+        "Resort Setting",
+        "Dream Wedding",
       ],
     },
     {
       id: 3,
-      name: "Taj Hotel & Convention",
-      rooms: 239,
+      name: "Taj Fort Aguada",
+      rooms: 142,
       eventSpaces: 3,
       description:
-        "Experience the backdrop of the monument of love - The Taj Mahal, at the Taj Hotel and Convention, Agra or the grand exquisite indoor spaces on your big day!",
-      image:
-        tajhotel_agra,
+        "The perfect spot next to bay view point, Taj Fort Aguada, Goa adds that pinch of essence of glamour and luxury needed for a perfect destination wedding!",
+      image: tajfort,
       features: [
-        "Taj Mahal Backdrop",
-        "Exquisite Interiors",
-        "Convention Facilities",
-        "Grand Spaces",
+        "Bay View Point",
+        "Glamour & Luxury",
+        "Perfect Location",
+        "Essence of Style",
       ],
     },
     {
       id: 4,
-      name: "Jaypee Palace",
-      rooms: 341,
-      eventSpaces: 5,
+      name: "St. Regis",
+      rooms: 206,
+      eventSpaces: 8,
       description:
-        "Get hitched at an all in one property - Jaypee Palace, Agra that displays Mughal and contemporary architecture, greenery and enormous water bodies!",
-      image:
-       jaypee_agra,
+        "With lawns facing the Arabian Sea, beachside and poolside venue, St. Regis, Goa is perfect for a scenic and mesmerizing wedding!",
+      image: rejis,
       features: [
-        "Mughal Architecture",
-        "Contemporary Design",
-        "Lush Greenery",
-        "Water Features",
+        "Arabian Sea Views",
+        "Beachside Venue",
+        "Poolside Setting",
+        "Scenic & Mesmerizing",
       ],
     },
     {
       id: 5,
-      name: "Marriott",
-      rooms: 189,
-      eventSpaces: 3,
+      name: "ITC Grand",
+      rooms: 252,
+      eventSpaces: 5,
       description:
-        "The colonial charm, wealth of the premise and the most picturesque backdrop, make Marriott the perfect venue for a big fat wedding!",
-      image:
-        marriott_agra,
+        "ITC Grand, Goa offers one of the most impressive venues for a big or small wedding at a picturesque location creating a vibe for an amazing celebration!",
+      image: itcgrand,
       features: [
-        "Colonial Charm",
-        "Picturesque Backdrop",
-        "Luxurious Premise",
-        "Grand Celebrations",
+        "Impressive Venues",
+        "Big or Small Weddings",
+        "Picturesque Location",
+        "Amazing Celebration",
       ],
     },
     {
       id: 6,
-      name: "Trident",
-      rooms: 135,
+      name: "W Goa",
+      rooms: 121,
       eventSpaces: 3,
       description:
-        "Treat your loved ones to an all-new experience at a luxurious place with exceptional hospitality and world-class amenities.",
-      image:
-        trident_agra,
+        "W, Goa is known to create magical experiences with a backdrop of an ocean front setting the vibe for an extraordinary luxury destination wedding!",
+      image: W,
       features: [
-        "Luxurious Setting",
-        "Exceptional Hospitality",
-        "World-class Amenities",
-        "Premium Experience",
+        "Magical Experiences",
+        "Ocean Front Backdrop",
+        "Extraordinary Luxury",
+        "Destination Wedding",
       ],
     },
   ];
 
-  const whyAgra = [
+  const whyGoa = [
     {
-      icon: Heart,
-      title: "City of Love",
+      icon: Waves,
+      title: "Surreal Beach Wedding",
       description:
-        "Home to the Taj Mahal, the ultimate symbol of eternal love and romance.",
+        "A surreal beach wedding and the sound of ocean are perfect for a breezy wedding the luxury venues in Goa have to offer!",
     },
     {
-      icon: Crown,
-      title: "Royal Heritage",
+      icon: Heart,
+      title: "Island Wedding",
       description:
-        "Rich Mughal history with magnificent palaces and architectural wonders.",
+        "Be it an island wedding, church wedding or tropical style wedding, Goa has stunning venues to make your day unforgettable!",
     },
     {
       icon: Building,
-      title: "Prominent Attractions",
+      title: "Luxurious Venues",
       description:
-        "Iconic monuments and historical sites that create magical backdrops.",
+        "Goa offers luxury venues with its own charm and magnificent settings for a dream destination wedding!",
     },
     {
       icon: Star,
-      title: "Lavish Experience",
+      title: "Beach Inspiration",
       description:
-        "Perfect destination for royal, magical, and unforgettable wedding celebrations.",
+        "A wedding inspired by beaches at this destination - Goa, which has its own charm and luxurious venues is a dream come true!",
     },
   ];
 
@@ -157,8 +151,8 @@ function Agra() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-10 pb-14 bg-gradient-to-b bg-gray-100 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-amber-50 to-orange-50 opacity-30"></div>
+      <section className="pt-10 pb-20 bg-gradient-to-b from-cyan-50 to-blue-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-50 to-teal-50 opacity-30"></div>
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -167,19 +161,19 @@ function Agra() {
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-luxury-navy mb-6 tracking-wider">
-              AGRA
+              GOA
             </h1>
             <div className="w-24 h-1 bg-blue-900 mx-auto mb-8"></div>
             <p className="text-lg md:text-lg text-gray-600 max-w-5xl mx-auto leading-relaxed">
-              Agra is all about romance, heritage and history, offering pleasing
-              surroundings for getting married in style!
+              A wedding inspired by beaches at this destination - Goa, which has
+              its own charm and luxurious venues is a dream come true!
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Top Hotels Section */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -211,7 +205,7 @@ function Agra() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute bottom-4 left-4">
-                    <h3 className="text-2xl font-bold text-white mb-2">
+                    <h3 className="text-xl font-bold text-white mb-2">
                       {hotel.name}
                     </h3>
                   </div>
@@ -239,7 +233,7 @@ function Agra() {
                     {hotel.features.map((feature, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-pink-50 text-gray-600 text-xs rounded-full border border-pink-100"
+                        className="px-3 py-1 bg-cyan-50 text-gray-600 text-xs rounded-full border border-cyan-100"
                       >
                         {feature}
                       </span>
@@ -253,7 +247,7 @@ function Agra() {
       </section>
 
       {/* Weather Section */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -266,17 +260,34 @@ function Agra() {
               </h2>
               <div className="w-16 h-1 bg-blue-900 mb-6"></div>
 
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <div className="flex items-center mb-4">
-                  <Sun className="text-blue-900 mr-3" size={24} />
-                  <span className="text-lg font-semibold text-luxury-navy">
-                    Best Season
-                  </span>
+              <div className="space-y-4">
+                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                  <div className="flex items-center mb-4">
+                    <Sun className="text-blue-900 mr-3" size={24} />
+                    <span className="text-lg font-semibold text-luxury-navy">
+                      Best Season
+                    </span>
+                  </div>
+                  <p className="text-gray-600">
+                    The best months to get married in Goa are from end of
+                    November to the beginning of February. During these months,
+                    the evenings and nights are pleasant and humidity is under
+                    control.
+                  </p>
                 </div>
-                <p className="text-gray-600">
-                  October to March offers pleasant weather perfect for outdoor
-                  wedding celebrations and Taj Mahal visits.
-                </p>
+
+                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                  <div className="flex items-center mb-4">
+                    <Thermometer className="text-blue-500 mr-3" size={24} />
+                    <span className="text-lg font-semibold text-luxury-navy">
+                      Temperature Range
+                    </span>
+                  </div>
+                  <p className="text-gray-600">
+                    Winter: 20-30°C (68-86°F) | Summer: 25-35°C (77-95°F) |
+                    Monsoon: 24-30°C (75-86°F)
+                  </p>
+                </div>
               </div>
             </motion.div>
 
@@ -288,7 +299,7 @@ function Agra() {
             >
               <img
                 src={Weather}
-                alt="Agra Weather and Taj Mahal"
+                alt="Goa Beach Weather"
                 className="rounded-2xl shadow-xl"
               />
             </motion.div>
@@ -296,8 +307,8 @@ function Agra() {
         </div>
       </section>
 
-      {/* Why Wedding in Agra Section */}
-      <section className="pt-16 pb-10 bg-white">
+      {/* Why Wedding in Goa Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -306,28 +317,28 @@ function Agra() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-luxury-navy mb-6 tracking-wider">
-              WHY&nbsp;WEDDING&nbsp;IN&nbsp;AGRA?
+              WHY&nbsp;WEDDING&nbsp;IN&nbsp;GOA?
             </h2>
             <div className="w-20 h-1 bg-blue-900 mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Agra, the romantic city of India, home to most prominent
-              attractions like Taj Mahal - a symbol of love is one of the best
-              destinations to tie the knot with a lavish, royal and magical
-              experience!
+              A surreal beach wedding and the sound of ocean are perfect for a
+              breezy wedding! Be it an island wedding, church wedding or
+              tropical style wedding, Goa has stunning venues to make your day
+              unforgettable!
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {whyAgra.map((reason, index) => (
+            {whyGoa.map((reason, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="text-center bg-gray-100 p-8 rounded-xl border border-gray-100 hover:border-blue-900 hover:shadow-md transition-all duration-300"
+                className="text-center bg-gray-50 p-8 rounded-xl border border-gray-100 hover:border-blue-900 hover:shadow-md transition-all duration-300"
               >
-                <div className="text-red-600 mb-6 flex justify-center">
+                <div className="text-blue-900 mb-6 flex justify-center">
                   <reason.icon size={48} />
                 </div>
                 <h3 className="text-xl font-semibold text-luxury-navy mb-4">
@@ -342,12 +353,8 @@ function Agra() {
         </div>
       </section>
 
-      <div>
-        {" "}
-        <img src={agra} alt="" />
-      </div>
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-luxury-navy to-luxury-green">
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-teal-600">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -355,20 +362,22 @@ function Agra() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready for Your Romantic Wedding?
+              Ready for Your Beach Wedding Dream?
             </h2>
-            <p className="text-lg text-pink-100 mb-8 mx-auto">
-              Let us help you plan the perfect destination wedding in the
-              romantic city of Agra, with the majestic Taj Mahal as your
-              backdrop.
+            <p className="text-lg text-cyan-100 mb-8 mx-auto max-w-3xl">
+              Let us help you plan the perfect destination wedding in Goa, where
+              pristine beaches, luxury resorts, and ocean breezes create an
+              unforgettable celebration by the sea.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white hover:bg-blue-900 text-blue-900 hover:text-white px-6 py-3 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              Plan Your Agra Wedding
-            </motion.button>
+            <Link to="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-blue-900 hover:bg-blue-800 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Plan Your Goa Wedding
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -378,4 +387,4 @@ function Agra() {
   );
 }
 
-export default Agra;
+export default Goa;

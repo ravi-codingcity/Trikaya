@@ -20,7 +20,9 @@ import team_1 from "../Assets/teams/aryan.jpeg";
 import team_2 from "../Assets/teams/raghav.jpeg";
 import team_3 from "../Assets/teams/ashish.jpeg";
 import team_4 from "../Assets/teams/anusha.jpeg";
+import team_5 from "../Assets/teams/anuj.jpeg";
 import team_6 from "../Assets/teams/maroof.jpeg";
+import team_7 from "../Assets/teams/saquib.jpeg";
 
 const AboutUs = () => {
   const values = [
@@ -104,16 +106,20 @@ const team = [
     },
      {
       name: "Anuj Saraswat",
-      image: team_6,
+      image: team_5,
     },
      {
       name: "Maroof Khan",
       image: team_6,
     },
+    {
+      name: "Saquib Khan",
+      image: team_7,
+    },
   ];
 
   const stats = [
-    { number: "500+", label: "Events Completed", icon: Award },
+    { number: "1000+", label: "Events Completed", icon: Award },
     { number: "50+", label: "Destinations", icon: Globe },
     { number: "98%", label: "Client Satisfaction", icon: Star },
     { number: "15+", label: "Years Experience", icon: Users },
@@ -278,7 +284,7 @@ const team = [
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="text-center bg-white p-8 rounded-xl border border-gray-100 hover:border-luxury-gold hover:shadow-md transition-all duration-300"
+                className="text-center bg-white p-8 rounded-xl border border-gray-100 hover:border-blue-900 hover:shadow-md transition-all duration-300"
               >
                 <div className="text-red-600 mb-6 flex justify-center">
                   <value.icon size={48} />
@@ -320,7 +326,7 @@ const team = [
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="text-center group bg-gray-100 rounded-xl border border-gray-100 hover:border-luxury-gold hover:shadow-md transition-all duration-300"
+                className="text-center group bg-gray-100 rounded-xl border border-gray-100 hover:border-blue-900 hover:shadow-md transition-all duration-300"
               >
                 <div className="relative mb-3 overflow-hidden rounded-xl">
                   <img
@@ -357,7 +363,7 @@ const team = [
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8">
             {team.map((member, index) => (
               <motion.div
                 key={index}

@@ -17,138 +17,131 @@ import { Link } from "react-router-dom";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import Weather from "../../assets/Weather.avif";
-import agra from "../../assets/agra.png";
-import amarvillas_agra from "../../assets/destination/amarvillas.jpg";
-import itcmughal_agra from "../../assets/destination/itcmughal_agra.png";
-import jaypee_agra from "../../assets/destination/jaypee_agra.jpg";
-import tajhotel_agra from "../../assets/destination/tajhotel_agra.jpg";
-import marriott_agra from "../../assets/destination/marriott_agra.jpg";
-import trident_agra from "../../assets/destination/trident_agra.jpg";
 
-function Agra() {
+function Udaipur() {
   const hotels = [
     {
       id: 1,
-      name: "Amar Vilas",
-      rooms: 102,
-      eventSpaces: 9,
+      name: "Taj Fateh Prakash Palace",
+      rooms: 65,
+      eventSpaces: 3,
       description:
-        "Having an uninterrupted view of the monument of love - Taj Mahal, The Oberoi Amarvillas adds the essence of regal touch and splendour to your wedding celebration!",
+        "With the mesmerizing view of the Pichola Lake, experience the old-world charm at this luxurious property.",
       image:
-        amarvillas_agra,
+        "https://images.unsplash.com/photo-1609137144813-7d9921338f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       features: [
-        "Taj Mahal View",
-        "Regal Touch",
-        "Luxury Suites",
-        "Splendid Architecture",
+        "Pichola Lake View",
+        "Old-world Charm",
+        "Luxurious Property",
+        "Scenic Location",
       ],
     },
     {
       id: 2,
-      name: "ITC Mughal",
-      rooms: 233,
-      eventSpaces: 4,
+      name: "The Raffles",
+      rooms: 100,
+      eventSpaces: 6,
       description:
-        "The ITC Mughal, Agra is where royalty and culture of Indian history come together. An extravagant wedding at this magnificent property is a dream come true!",
+        "It is the most luxurious 21 acre palace in India set amid lush greenery, making it an architectural marvel place for weddings.",
       image:
-        itcmughal_agra,
+        "https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       features: [
-        "Royal Heritage",
-        "Cultural Ambiance",
-        "Magnificent Property",
-        "Historical Significance",
+        "21 Acre Palace",
+        "Lush Greenery",
+        "Architectural Marvel",
+        "Most Luxurious",
       ],
     },
     {
       id: 3,
-      name: "Taj Hotel & Convention",
-      rooms: 239,
+      name: "Taj Lake Palace",
+      rooms: 83,
       eventSpaces: 3,
       description:
-        "Experience the backdrop of the monument of love - The Taj Mahal, at the Taj Hotel and Convention, Agra or the grand exquisite indoor spaces on your big day!",
+        "Located in the midst of Lake Pichola, this royal palace built with marvel architecture offers a peaceful ambience and alluring views.",
       image:
-        tajhotel_agra,
+        "https://images.unsplash.com/photo-1568084680786-a84f91d1153c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       features: [
-        "Taj Mahal Backdrop",
-        "Exquisite Interiors",
-        "Convention Facilities",
-        "Grand Spaces",
+        "Lake Pichola Setting",
+        "Royal Palace",
+        "Marvel Architecture",
+        "Peaceful Ambience",
       ],
     },
     {
       id: 4,
-      name: "Jaypee Palace",
-      rooms: 341,
-      eventSpaces: 5,
+      name: "Udaivilas",
+      rooms: 88,
+      eventSpaces: 4,
       description:
-        "Get hitched at an all in one property - Jaypee Palace, Agra that displays Mughal and contemporary architecture, greenery and enormous water bodies!",
+        "Arrive in style via boat and experience the grand architecture inspired by the palaces of Rajasthan.",
       image:
-       jaypee_agra,
+        "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       features: [
-        "Mughal Architecture",
-        "Contemporary Design",
-        "Lush Greenery",
-        "Water Features",
+        "Boat Arrival",
+        "Grand Architecture",
+        "Rajasthani Palaces",
+        "Stylish Experience",
       ],
     },
     {
       id: 5,
-      name: "Marriott",
-      rooms: 189,
+      name: "Leela Palace",
+      rooms: 80,
       eventSpaces: 3,
       description:
-        "The colonial charm, wealth of the premise and the most picturesque backdrop, make Marriott the perfect venue for a big fat wedding!",
+        "With the breathtaking view of the Aravali Mountains and banks of the Pichola Lake, Leela oozes old-world charm and traditional Rajasthani outlook.",
       image:
-        marriott_agra,
+        "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       features: [
-        "Colonial Charm",
-        "Picturesque Backdrop",
-        "Luxurious Premise",
-        "Grand Celebrations",
+        "Aravali Mountains View",
+        "Pichola Lake Banks",
+        "Old-world Charm",
+        "Traditional Rajasthani",
       ],
     },
     {
       id: 6,
-      name: "Trident",
-      rooms: 135,
-      eventSpaces: 3,
+      name: "Taj Aravali",
+      rooms: 170,
+      eventSpaces: 4,
       description:
-        "Treat your loved ones to an all-new experience at a luxurious place with exceptional hospitality and world-class amenities.",
+        "Surrounded by the Aravali Ranges, this luxurious resort is spread over 27 acres giving calm and serene scenarios.",
       image:
-        trident_agra,
+        "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       features: [
+        "Aravali Ranges",
+        "27 Acres Resort",
+        "Calm & Serene",
         "Luxurious Setting",
-        "Exceptional Hospitality",
-        "World-class Amenities",
-        "Premium Experience",
       ],
     },
   ];
 
-  const whyAgra = [
+  const whyUdaipur = [
     {
       icon: Heart,
-      title: "City of Love",
+      title: "Most Romantic Spot",
       description:
-        "Home to the Taj Mahal, the ultimate symbol of eternal love and romance.",
+        "Labelled as the most romantic spot on the continent of India by the Britishers.",
     },
     {
       icon: Crown,
-      title: "Royal Heritage",
+      title: "Historic Culture",
       description:
-        "Rich Mughal history with magnificent palaces and architectural wonders.",
+        "Known for its historic culture and magnificent Rajput-era palaces.",
     },
     {
       icon: Building,
-      title: "Prominent Attractions",
+      title: "Scenic Locations",
       description:
-        "Iconic monuments and historical sites that create magical backdrops.",
+        "Breathtaking scenic locations with lakes, mountains, and architectural marvels.",
     },
     {
       icon: Star,
-      title: "Lavish Experience",
+      title: "City of Lakes",
       description:
-        "Perfect destination for royal, magical, and unforgettable wedding celebrations.",
+        "The City of Lakes offers one of the most romantic and loved destinations for weddings.",
     },
   ];
 
@@ -157,8 +150,8 @@ function Agra() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-10 pb-14 bg-gradient-to-b bg-gray-100 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-amber-50 to-orange-50 opacity-30"></div>
+      <section className="pt-10 pb-20 bg-gradient-to-b from-blue-50 to-purple-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-purple-50 opacity-30"></div>
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -167,19 +160,19 @@ function Agra() {
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-luxury-navy mb-6 tracking-wider">
-              AGRA
+              UDAIPUR
             </h1>
-            <div className="w-24 h-1 bg-blue-900 mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-luxury-gold mx-auto mb-8"></div>
             <p className="text-lg md:text-lg text-gray-600 max-w-5xl mx-auto leading-relaxed">
-              Agra is all about romance, heritage and history, offering pleasing
-              surroundings for getting married in style!
+              Udaipur - The City of Lakes is one of the most romantic and loved
+              destination for weddings.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Top Hotels Section */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -190,7 +183,7 @@ function Agra() {
             <h2 className="text-2xl md:text-4xl font-bold text-luxury-navy mb-4 tracking-wider">
               TOP&nbsp;HOTELS
             </h2>
-            <div className="w-20 h-1 bg-blue-900 mx-auto"></div>
+            <div className="w-20 h-1 bg-luxury-gold mx-auto"></div>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -201,7 +194,7 @@ function Agra() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:border-blue-900 hover:shadow-xl transition-all duration-300 group"
+                className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:border-luxury-gold hover:shadow-xl transition-all duration-300 group"
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -211,7 +204,7 @@ function Agra() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute bottom-4 left-4">
-                    <h3 className="text-2xl font-bold text-white mb-2">
+                    <h3 className="text-xl font-bold text-white mb-2">
                       {hotel.name}
                     </h3>
                   </div>
@@ -220,11 +213,11 @@ function Agra() {
                 <div className="p-6">
                   <div className="flex justify-between items-center mb-4">
                     <div className="flex items-center text-gray-600">
-                      <Bed size={18} className="mr-2 text-blue-900" />
+                      <Bed size={18} className="mr-2 text-luxury-gold" />
                       <span className="font-medium">{hotel.rooms} Rooms</span>
                     </div>
                     <div className="flex items-center text-gray-600">
-                      <Building size={18} className="mr-2 text-blue-900" />
+                      <Building size={18} className="mr-2 text-luxury-gold" />
                       <span className="font-medium">
                         {hotel.eventSpaces} Event Spaces
                       </span>
@@ -239,7 +232,7 @@ function Agra() {
                     {hotel.features.map((feature, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-pink-50 text-gray-600 text-xs rounded-full border border-pink-100"
+                        className="px-3 py-1 bg-blue-50 text-gray-600 text-xs rounded-full border border-blue-100"
                       >
                         {feature}
                       </span>
@@ -253,7 +246,7 @@ function Agra() {
       </section>
 
       {/* Weather Section */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -264,19 +257,34 @@ function Agra() {
               <h2 className="text-3xl md:text-5xl font-bold text-luxury-navy mb-6 tracking-wider">
                 WEATHER
               </h2>
-              <div className="w-16 h-1 bg-blue-900 mb-6"></div>
+              <div className="w-16 h-1 bg-luxury-gold mb-6"></div>
 
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <div className="flex items-center mb-4">
-                  <Sun className="text-blue-900 mr-3" size={24} />
-                  <span className="text-lg font-semibold text-luxury-navy">
-                    Best Season
-                  </span>
+              <div className="space-y-4">
+                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                  <div className="flex items-center mb-4">
+                    <Sun className="text-luxury-gold mr-3" size={24} />
+                    <span className="text-lg font-semibold text-luxury-navy">
+                      Best Season
+                    </span>
+                  </div>
+                  <p className="text-gray-600">
+                    Udaipur has a warm climate but September to March can be
+                    described as the best time to visit Udaipur city.
+                  </p>
                 </div>
-                <p className="text-gray-600">
-                  October to March offers pleasant weather perfect for outdoor
-                  wedding celebrations and Taj Mahal visits.
-                </p>
+
+                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                  <div className="flex items-center mb-4">
+                    <Thermometer className="text-blue-500 mr-3" size={24} />
+                    <span className="text-lg font-semibold text-luxury-navy">
+                      Temperature Range
+                    </span>
+                  </div>
+                  <p className="text-gray-600">
+                    Winter: 15-25°C (59-77°F) | Summer: 25-35°C (77-95°F) |
+                    Monsoon: 20-30°C (68-86°F)
+                  </p>
+                </div>
               </div>
             </motion.div>
 
@@ -288,7 +296,7 @@ function Agra() {
             >
               <img
                 src={Weather}
-                alt="Agra Weather and Taj Mahal"
+                alt="Udaipur Weather and Lake Pichola"
                 className="rounded-2xl shadow-xl"
               />
             </motion.div>
@@ -296,8 +304,8 @@ function Agra() {
         </div>
       </section>
 
-      {/* Why Wedding in Agra Section */}
-      <section className="pt-16 pb-10 bg-white">
+      {/* Why Wedding in Udaipur Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -306,28 +314,27 @@ function Agra() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-luxury-navy mb-6 tracking-wider">
-              WHY&nbsp;WEDDING&nbsp;IN&nbsp;AGRA?
+              WHY&nbsp;WEDDING&nbsp;IN&nbsp;UDAIPUR?
             </h2>
-            <div className="w-20 h-1 bg-blue-900 mx-auto mb-8"></div>
+            <div className="w-20 h-1 bg-luxury-gold mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Agra, the romantic city of India, home to most prominent
-              attractions like Taj Mahal - a symbol of love is one of the best
-              destinations to tie the knot with a lavish, royal and magical
-              experience!
+              Labelled as the most romantic spot on the continent of India by
+              the Britishers, Udaipur is known for its historic culture, scenic
+              locations and the Rajput-era palaces!
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {whyAgra.map((reason, index) => (
+            {whyUdaipur.map((reason, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="text-center bg-gray-100 p-8 rounded-xl border border-gray-100 hover:border-blue-900 hover:shadow-md transition-all duration-300"
+                className="text-center bg-gray-50 p-8 rounded-xl border border-gray-100 hover:border-luxury-gold hover:shadow-md transition-all duration-300"
               >
-                <div className="text-red-600 mb-6 flex justify-center">
+                <div className="text-luxury-gold mb-6 flex justify-center">
                   <reason.icon size={48} />
                 </div>
                 <h3 className="text-xl font-semibold text-luxury-navy mb-4">
@@ -342,12 +349,8 @@ function Agra() {
         </div>
       </section>
 
-      <div>
-        {" "}
-        <img src={agra} alt="" />
-      </div>
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-luxury-navy to-luxury-green">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -355,20 +358,22 @@ function Agra() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready for Your Romantic Wedding?
+              Ready for Your Lake City Wedding?
             </h2>
-            <p className="text-lg text-pink-100 mb-8 mx-auto">
+            <p className="text-lg text-blue-100 mb-8 mx-auto max-w-3xl">
               Let us help you plan the perfect destination wedding in the
-              romantic city of Agra, with the majestic Taj Mahal as your
-              backdrop.
+              romantic City of Lakes, with magnificent palaces and serene lake
+              views as your backdrop.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white hover:bg-blue-900 text-blue-900 hover:text-white px-6 py-3 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              Plan Your Agra Wedding
-            </motion.button>
+            <Link to="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-luxury-gold hover:bg-luxury-darkGold text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Plan Your Udaipur Wedding
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -378,4 +383,4 @@ function Agra() {
   );
 }
 
-export default Agra;
+export default Udaipur;

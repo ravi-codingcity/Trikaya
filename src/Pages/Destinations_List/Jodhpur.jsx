@@ -12,143 +12,144 @@ import {
   Sun,
   Thermometer,
   ArrowLeft,
+  Castle,
+  Shield,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import Weather from "../../assets/Weather.avif";
-import agra from "../../assets/agra.png";
-import amarvillas_agra from "../../assets/destination/amarvillas.jpg";
-import itcmughal_agra from "../../assets/destination/itcmughal_agra.png";
-import jaypee_agra from "../../assets/destination/jaypee_agra.jpg";
-import tajhotel_agra from "../../assets/destination/tajhotel_agra.jpg";
-import marriott_agra from "../../assets/destination/marriott_agra.jpg";
-import trident_agra from "../../assets/destination/trident_agra.jpg";
+import umaid from "../../assets/destination/jodhpur/umaid.jpg";
+import raas from "../../assets/destination/jodhpur/raas.jpg";
+import inadana from "../../assets/destination/jodhpur/indiana.jpg";
+import taj from "../../assets/destination/jodhpur/taj.jpg";
+import ajit from "../../assets/destination/jodhpur/ajit.jpg";
+import radisson from "../../assets/destination/jodhpur/radisson.jpg";
 
-function Agra() {
+function Jodhpur() {
   const hotels = [
     {
       id: 1,
-      name: "Amar Vilas",
-      rooms: 102,
-      eventSpaces: 9,
+      name: "Umaid Bhawan Palace",
+      rooms: 70,
+      eventSpaces: 3,
       description:
-        "Having an uninterrupted view of the monument of love - Taj Mahal, The Oberoi Amarvillas adds the essence of regal touch and splendour to your wedding celebration!",
+        "A magnificent piece of Jodhpur's heritage - Umaid Bhawan is a great fit for a big fat royal wedding that'll look straight out of a fairytale!",
       image:
-        amarvillas_agra,
+        umaid,
       features: [
-        "Taj Mahal View",
-        "Regal Touch",
-        "Luxury Suites",
-        "Splendid Architecture",
+        "Jodhpur's Heritage",
+        "Royal Wedding",
+        "Fairytale Setting",
+        "Magnificent Palace",
       ],
     },
     {
       id: 2,
-      name: "ITC Mughal",
-      rooms: 233,
-      eventSpaces: 4,
+      name: "Raas",
+      rooms: 39,
+      eventSpaces: 3,
       description:
-        "The ITC Mughal, Agra is where royalty and culture of Indian history come together. An extravagant wedding at this magnificent property is a dream come true!",
+        "A fusion of ancient and modern style - Raas Jodhpur offers Haveli like architecture, which is a plus if you wish to have a grand backdrop for your wedding!",
       image:
-        itcmughal_agra,
+        raas,
       features: [
-        "Royal Heritage",
-        "Cultural Ambiance",
-        "Magnificent Property",
-        "Historical Significance",
+        "Ancient & Modern",
+        "Haveli Architecture",
+        "Grand Backdrop",
+        "Fusion Style",
       ],
     },
     {
       id: 3,
-      name: "Taj Hotel & Convention",
-      rooms: 239,
+      name: "Indana Palace",
+      rooms: 88,
       eventSpaces: 3,
       description:
-        "Experience the backdrop of the monument of love - The Taj Mahal, at the Taj Hotel and Convention, Agra or the grand exquisite indoor spaces on your big day!",
+        "Indana Palace, Jodhpur is one of the popular palaces to tie the knot adding a perfect combination of both the old and new world luxurious architecture!",
       image:
-        tajhotel_agra,
+        inadana,
       features: [
-        "Taj Mahal Backdrop",
-        "Exquisite Interiors",
-        "Convention Facilities",
-        "Grand Spaces",
+        "Popular Palace",
+        "Old & New World",
+        "Luxurious Architecture",
+        "Perfect Combination",
       ],
     },
     {
       id: 4,
-      name: "Jaypee Palace",
-      rooms: 341,
-      eventSpaces: 5,
+      name: "Taj Hari Mahal",
+      rooms: 93,
+      eventSpaces: 3,
       description:
-        "Get hitched at an all in one property - Jaypee Palace, Agra that displays Mughal and contemporary architecture, greenery and enormous water bodies!",
+        "A marvellous property - Taj Hari Mahal, Jodhpur is an epitome of luxury with an essence of cultural heritage and a dream venue for a destination wedding!",
       image:
-       jaypee_agra,
+        taj,
       features: [
-        "Mughal Architecture",
-        "Contemporary Design",
-        "Lush Greenery",
-        "Water Features",
+        "Marvellous Property",
+        "Epitome of Luxury",
+        "Cultural Heritage",
+        "Dream Venue",
       ],
     },
     {
       id: 5,
-      name: "Marriott",
-      rooms: 189,
-      eventSpaces: 3,
+      name: "Ajit Bhawan",
+      rooms: 70,
+      eventSpaces: 4,
       description:
-        "The colonial charm, wealth of the premise and the most picturesque backdrop, make Marriott the perfect venue for a big fat wedding!",
+        "Ajit Bhawan, Jodhpur - India's first heritage hotel, is a retreat known for tradition and heritage, making it perfect for a heavenly Indian wedding!",
       image:
-        marriott_agra,
+        ajit,
       features: [
-        "Colonial Charm",
-        "Picturesque Backdrop",
-        "Luxurious Premise",
-        "Grand Celebrations",
+        "First Heritage Hotel",
+        "Tradition & Heritage",
+        "Heavenly Indian Wedding",
+        "Perfect Retreat",
       ],
     },
     {
       id: 6,
-      name: "Trident",
-      rooms: 135,
+      name: "Radisson",
+      rooms: 96,
       eventSpaces: 3,
       description:
-        "Treat your loved ones to an all-new experience at a luxurious place with exceptional hospitality and world-class amenities.",
+        "Hosting a destination wedding at the Royal Radisson Jodhpur is all about regality, luxury, and that magical spark needed to make your special day memorable!",
       image:
-        trident_agra,
+        radisson,
       features: [
-        "Luxurious Setting",
-        "Exceptional Hospitality",
-        "World-class Amenities",
-        "Premium Experience",
+        "Royal Radisson",
+        "Regality & Luxury",
+        "Magical Spark",
+        "Memorable Day",
       ],
     },
   ];
 
-  const whyAgra = [
+  const whyJodhpur = [
     {
-      icon: Heart,
-      title: "City of Love",
+      icon: Castle,
+      title: "Rich Backdrops",
       description:
-        "Home to the Taj Mahal, the ultimate symbol of eternal love and romance.",
+        "Rich backdrops, historic culture and architecture, and spectacular surroundings in Jodhpur make it one of the best destinations to get married!",
     },
     {
       icon: Crown,
-      title: "Royal Heritage",
+      title: "Gateway to Royalty",
       description:
-        "Rich Mughal history with magnificent palaces and architectural wonders.",
+        "Jodhpur is not only the gateway to Thar but also the gateway to your wedding as it offers a touch of royalty and heritage to your wedding!",
     },
     {
-      icon: Building,
-      title: "Prominent Attractions",
+      icon: Shield,
+      title: "Blue City",
       description:
-        "Iconic monuments and historical sites that create magical backdrops.",
+        "Experience the magic of the Blue City with its majestic forts, palaces, and traditional Rajasthani architecture for an unforgettable celebration.",
     },
     {
-      icon: Star,
-      title: "Lavish Experience",
+      icon: Heart,
+      title: "Cultural Heritage",
       description:
-        "Perfect destination for royal, magical, and unforgettable wedding celebrations.",
+        "Immerse yourself in the rich cultural heritage of Rajasthan with traditional ceremonies and royal hospitality in the heart of the Thar Desert.",
     },
   ];
 
@@ -157,8 +158,8 @@ function Agra() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-10 pb-14 bg-gradient-to-b bg-gray-100 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-amber-50 to-orange-50 opacity-30"></div>
+      <section className="pt-10 pb-20 bg-gradient-to-b from-cyan-50 to-blue-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-50 to-teal-50 opacity-30"></div>
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -167,19 +168,20 @@ function Agra() {
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-luxury-navy mb-6 tracking-wider">
-              AGRA
+              JODHPUR
             </h1>
             <div className="w-24 h-1 bg-blue-900 mx-auto mb-8"></div>
             <p className="text-lg md:text-lg text-gray-600 max-w-5xl mx-auto leading-relaxed">
-              Agra is all about romance, heritage and history, offering pleasing
-              surroundings for getting married in style!
+              RICH BACKDROPS, HISTORIC CULTURE AND ARCHITECTURE, AND
+              SPECTACULAR SURROUNDINGS IN JODHPUR MAKE IT ONE OF THE BEST
+              DESTINATIONS TO GET MARRIED!
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Top Hotels Section */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -211,7 +213,7 @@ function Agra() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute bottom-4 left-4">
-                    <h3 className="text-2xl font-bold text-white mb-2">
+                    <h3 className="text-xl font-bold text-white mb-2">
                       {hotel.name}
                     </h3>
                   </div>
@@ -239,7 +241,7 @@ function Agra() {
                     {hotel.features.map((feature, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-pink-50 text-gray-600 text-xs rounded-full border border-pink-100"
+                        className="px-3 py-1 bg-cyan-50 text-gray-600 text-xs rounded-full border border-cyan-100"
                       >
                         {feature}
                       </span>
@@ -253,7 +255,7 @@ function Agra() {
       </section>
 
       {/* Weather Section */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -266,17 +268,32 @@ function Agra() {
               </h2>
               <div className="w-16 h-1 bg-blue-900 mb-6"></div>
 
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <div className="flex items-center mb-4">
-                  <Sun className="text-blue-900 mr-3" size={24} />
-                  <span className="text-lg font-semibold text-luxury-navy">
-                    Best Season
-                  </span>
+              <div className="space-y-4">
+                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                  <div className="flex items-center mb-4">
+                    <Sun className="text-blue-900 mr-3" size={24} />
+                    <span className="text-lg font-semibold text-luxury-navy">
+                      Best Season
+                    </span>
+                  </div>
+                  <p className="text-gray-600">
+                    You can plan your destination wedding in Jodhpur between
+                    October to March. These months have dry and cool weather.
+                  </p>
                 </div>
-                <p className="text-gray-600">
-                  October to March offers pleasant weather perfect for outdoor
-                  wedding celebrations and Taj Mahal visits.
-                </p>
+
+                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                  <div className="flex items-center mb-4">
+                    <Thermometer className="text-blue-500 mr-3" size={24} />
+                    <span className="text-lg font-semibold text-luxury-navy">
+                      Temperature Range
+                    </span>
+                  </div>
+                  <p className="text-gray-600">
+                    Winter: 10-25°C (50-77°F) | Summer: 25-45°C (77-113°F) |
+                    Pleasant: Oct-Mar (Perfect for celebrations)
+                  </p>
+                </div>
               </div>
             </motion.div>
 
@@ -288,7 +305,7 @@ function Agra() {
             >
               <img
                 src={Weather}
-                alt="Agra Weather and Taj Mahal"
+                alt="Jodhpur Desert Weather"
                 className="rounded-2xl shadow-xl"
               />
             </motion.div>
@@ -296,8 +313,8 @@ function Agra() {
         </div>
       </section>
 
-      {/* Why Wedding in Agra Section */}
-      <section className="pt-16 pb-10 bg-white">
+      {/* Why Wedding in Jodhpur Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -306,28 +323,28 @@ function Agra() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-luxury-navy mb-6 tracking-wider">
-              WHY&nbsp;WEDDING&nbsp;IN&nbsp;AGRA?
+              WHY&nbsp;WEDDING&nbsp;IN&nbsp;JODHPUR?
             </h2>
             <div className="w-20 h-1 bg-blue-900 mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Agra, the romantic city of India, home to most prominent
-              attractions like Taj Mahal - a symbol of love is one of the best
-              destinations to tie the knot with a lavish, royal and magical
-              experience!
+              Jodhpur is not only the gateway to Thar but also the gateway to
+              your wedding as it offers a touch of royalty and heritage to your
+              wedding! Experience the magnificent Blue City with its rich
+              backdrops and spectacular surroundings.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {whyAgra.map((reason, index) => (
+            {whyJodhpur.map((reason, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="text-center bg-gray-100 p-8 rounded-xl border border-gray-100 hover:border-blue-900 hover:shadow-md transition-all duration-300"
+                className="text-center bg-gray-50 p-8 rounded-xl border border-gray-100 hover:border-blue-900 hover:shadow-md transition-all duration-300"
               >
-                <div className="text-red-600 mb-6 flex justify-center">
+                <div className="text-blue-900 mb-6 flex justify-center">
                   <reason.icon size={48} />
                 </div>
                 <h3 className="text-xl font-semibold text-luxury-navy mb-4">
@@ -342,12 +359,8 @@ function Agra() {
         </div>
       </section>
 
-      <div>
-        {" "}
-        <img src={agra} alt="" />
-      </div>
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-luxury-navy to-luxury-green">
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-teal-600">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -355,20 +368,22 @@ function Agra() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready for Your Romantic Wedding?
+              Ready for Your Blue City Wedding Dream?
             </h2>
-            <p className="text-lg text-pink-100 mb-8 mx-auto">
-              Let us help you plan the perfect destination wedding in the
-              romantic city of Agra, with the majestic Taj Mahal as your
-              backdrop.
+            <p className="text-lg text-cyan-100 mb-8 mx-auto max-w-3xl">
+              Let us help you plan the perfect destination wedding in Jodhpur,
+              where royal palaces, cultural heritage, and majestic forts create
+              an unforgettable celebration in the heart of Rajasthan.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white hover:bg-blue-900 text-blue-900 hover:text-white px-6 py-3 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              Plan Your Agra Wedding
-            </motion.button>
+            <Link to="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-blue-900 hover:bg-blue-800 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Plan Your Jodhpur Wedding
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -378,4 +393,4 @@ function Agra() {
   );
 }
 
-export default Agra;
+export default Jodhpur;

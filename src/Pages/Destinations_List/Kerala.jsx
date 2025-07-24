@@ -12,143 +12,145 @@ import {
   Sun,
   Thermometer,
   ArrowLeft,
+  Waves,
+  TreePine,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import Weather from "../../assets/Weather.avif";
-import agra from "../../assets/agra.png";
-import amarvillas_agra from "../../assets/destination/amarvillas.jpg";
-import itcmughal_agra from "../../assets/destination/itcmughal_agra.png";
-import jaypee_agra from "../../assets/destination/jaypee_agra.jpg";
-import tajhotel_agra from "../../assets/destination/tajhotel_agra.jpg";
-import marriott_agra from "../../assets/destination/marriott_agra.jpg";
-import trident_agra from "../../assets/destination/trident_agra.jpg";
+import taj from "../../assets/destination/kerala/taj.jpg";
+import leela from "../../assets/destination/kerala/leela.jpg";
+import tajkumarakom from "../../assets/destination/kerala/tajkumarakom.jpg";
+import kumarakom from "../../assets/destination/kerala/kumarakom.jpg";
+import ramada from "../../assets/destination/kerala/ramada.jpg";
+import the from "../../assets/destination/kerala/the.jpg";
 
-function Agra() {
+
+function Kerala() {
   const hotels = [
     {
       id: 1,
-      name: "Amar Vilas",
-      rooms: 102,
-      eventSpaces: 9,
+      name: "Taj Bekal",
+      rooms: 75,
+      eventSpaces: 4,
       description:
-        "Having an uninterrupted view of the monument of love - Taj Mahal, The Oberoi Amarvillas adds the essence of regal touch and splendour to your wedding celebration!",
+        "Inspired by the design of Ketuvallam houseboats, it is a beautifully located property right by the side of the Kappil River.",
       image:
-        amarvillas_agra,
+        taj,
       features: [
-        "Taj Mahal View",
-        "Regal Touch",
-        "Luxury Suites",
-        "Splendid Architecture",
+        "Ketuvallam Design",
+        "Kappil River Side",
+        "Beautiful Location",
+        "Houseboat Inspired",
       ],
     },
     {
       id: 2,
-      name: "ITC Mughal",
-      rooms: 233,
-      eventSpaces: 4,
+      name: "Leela Kovalam",
+      rooms: 184,
+      eventSpaces: 3,
       description:
-        "The ITC Mughal, Agra is where royalty and culture of Indian history come together. An extravagant wedding at this magnificent property is a dream come true!",
+        "Nestled within the serene surroundings of 67 acres of lush greenery, this property offers the best view of the Kovalam shoreline and the Arabian Sea.",
       image:
-        itcmughal_agra,
+        leela,
       features: [
-        "Royal Heritage",
-        "Cultural Ambiance",
-        "Magnificent Property",
-        "Historical Significance",
+        "67 Acres Greenery",
+        "Kovalam Shoreline",
+        "Arabian Sea Views",
+        "Serene Surroundings",
       ],
     },
     {
       id: 3,
-      name: "Taj Hotel & Convention",
-      rooms: 239,
-      eventSpaces: 3,
+      name: "Taj Kumarakom Resort and Spa",
+      rooms: 28,
+      eventSpaces: 2,
       description:
-        "Experience the backdrop of the monument of love - The Taj Mahal, at the Taj Hotel and Convention, Agra or the grand exquisite indoor spaces on your big day!",
+        "With exotic backwater views, located on the shores of the vast Vembanad Lake, this property is a striking structure that complements its rustic natural surroundings.",
       image:
-        tajhotel_agra,
+        tajkumarakom,
       features: [
-        "Taj Mahal Backdrop",
-        "Exquisite Interiors",
-        "Convention Facilities",
-        "Grand Spaces",
+        "Exotic Backwaters",
+        "Vembanad Lake",
+        "Striking Structure",
+        "Natural Surroundings",
       ],
     },
     {
       id: 4,
-      name: "Jaypee Palace",
-      rooms: 341,
-      eventSpaces: 5,
+      name: "Kumarakom Lake Resort",
+      rooms: 66,
+      eventSpaces: 3,
       description:
-        "Get hitched at an all in one property - Jaypee Palace, Agra that displays Mughal and contemporary architecture, greenery and enormous water bodies!",
+        "Acclaimed as the finest heritage resort in India, right on the banks of the serene Vembanad Lake, it is an exquisite luxury retreat with vivid reflection of the true culture of Kerala.",
       image:
-       jaypee_agra,
+        kumarakom,
       features: [
-        "Mughal Architecture",
-        "Contemporary Design",
-        "Lush Greenery",
-        "Water Features",
+        "Finest Heritage Resort",
+        "Vembanad Lake Banks",
+        "Luxury Retreat",
+        "True Kerala Culture",
       ],
     },
     {
       id: 5,
-      name: "Marriott",
-      rooms: 189,
+      name: "Ramada Resort",
+      rooms: 58,
       eventSpaces: 3,
       description:
-        "The colonial charm, wealth of the premise and the most picturesque backdrop, make Marriott the perfect venue for a big fat wedding!",
+        "A 5-minute walk from Kumbalam Lake, it is a 5 star deluxe luxury retreat with rooms offering views of Kerala's countryside.",
       image:
-        marriott_agra,
+        ramada,
       features: [
-        "Colonial Charm",
-        "Picturesque Backdrop",
-        "Luxurious Premise",
-        "Grand Celebrations",
+        "Kumbalam Lake",
+        "5 Star Deluxe",
+        "Countryside Views",
+        "Luxury Retreat",
       ],
     },
     {
       id: 6,
-      name: "Trident",
-      rooms: 135,
+      name: "The Zuri Kumarakom",
+      rooms: 72,
       eventSpaces: 3,
       description:
-        "Treat your loved ones to an all-new experience at a luxurious place with exceptional hospitality and world-class amenities.",
+        "With breathtaking views of the serene backwaters and lush greenery of Kerala, it is a 5-star property packed with top-notch luxe accommodations.",
       image:
-        trident_agra,
+        the,
       features: [
-        "Luxurious Setting",
-        "Exceptional Hospitality",
-        "World-class Amenities",
-        "Premium Experience",
+        "Breathtaking Views",
+        "Serene Backwaters",
+        "Lush Greenery",
+        "Top-notch Luxury",
       ],
     },
   ];
 
-  const whyAgra = [
+  const whyKerala = [
+    {
+      icon: Waves,
+      title: "God's Own Country",
+      description:
+        "Known as God's own country, Kerala has something for everyone when it comes to wedding.",
+    },
+    {
+      icon: TreePine,
+      title: "Natural Beauty",
+      description:
+        "A home to variety of cultures and religions, Kerala is the perfect place to embark on a new beginning with nature on its finest show.",
+    },
     {
       icon: Heart,
-      title: "City of Love",
+      title: "Backwater Romance",
       description:
-        "Home to the Taj Mahal, the ultimate symbol of eternal love and romance.",
+        "Experience the magic of Kerala's backwaters with serene lakes, lush greenery, and traditional houseboats for an unforgettable celebration.",
     },
     {
       icon: Crown,
-      title: "Royal Heritage",
+      title: "Cultural Diversity",
       description:
-        "Rich Mughal history with magnificent palaces and architectural wonders.",
-    },
-    {
-      icon: Building,
-      title: "Prominent Attractions",
-      description:
-        "Iconic monuments and historical sites that create magical backdrops.",
-    },
-    {
-      icon: Star,
-      title: "Lavish Experience",
-      description:
-        "Perfect destination for royal, magical, and unforgettable wedding celebrations.",
+        "Celebrate your union in a land that embraces various cultures and traditions, offering a perfect blend of heritage and natural splendor.",
     },
   ];
 
@@ -157,8 +159,8 @@ function Agra() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-10 pb-14 bg-gradient-to-b bg-gray-100 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-amber-50 to-orange-50 opacity-30"></div>
+      <section className="pt-10 pb-20 bg-gradient-to-b from-cyan-50 to-blue-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-50 to-teal-50 opacity-30"></div>
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -167,19 +169,19 @@ function Agra() {
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-luxury-navy mb-6 tracking-wider">
-              AGRA
+              KERALA
             </h1>
             <div className="w-24 h-1 bg-blue-900 mx-auto mb-8"></div>
             <p className="text-lg md:text-lg text-gray-600 max-w-5xl mx-auto leading-relaxed">
-              Agra is all about romance, heritage and history, offering pleasing
-              surroundings for getting married in style!
+              KNOWN AS GOD'S OWN COUNTRY, KERALA HAS SOMETHING FOR EVERYONE WHEN
+              IT COMES TO WEDDING.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Top Hotels Section */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -211,7 +213,7 @@ function Agra() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute bottom-4 left-4">
-                    <h3 className="text-2xl font-bold text-white mb-2">
+                    <h3 className="text-xl font-bold text-white mb-2">
                       {hotel.name}
                     </h3>
                   </div>
@@ -239,7 +241,7 @@ function Agra() {
                     {hotel.features.map((feature, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-pink-50 text-gray-600 text-xs rounded-full border border-pink-100"
+                        className="px-3 py-1 bg-cyan-50 text-gray-600 text-xs rounded-full border border-cyan-100"
                       >
                         {feature}
                       </span>
@@ -253,7 +255,7 @@ function Agra() {
       </section>
 
       {/* Weather Section */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -266,17 +268,33 @@ function Agra() {
               </h2>
               <div className="w-16 h-1 bg-blue-900 mb-6"></div>
 
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <div className="flex items-center mb-4">
-                  <Sun className="text-blue-900 mr-3" size={24} />
-                  <span className="text-lg font-semibold text-luxury-navy">
-                    Best Season
-                  </span>
+              <div className="space-y-4">
+                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                  <div className="flex items-center mb-4">
+                    <Sun className="text-blue-900 mr-3" size={24} />
+                    <span className="text-lg font-semibold text-luxury-navy">
+                      Best Season
+                    </span>
+                  </div>
+                  <p className="text-gray-600">
+                    The most ideal time to get married in Kerala is between the
+                    months of October and March when the weather is pleasant
+                    enough for both outdoor and indoor weddings.
+                  </p>
                 </div>
-                <p className="text-gray-600">
-                  October to March offers pleasant weather perfect for outdoor
-                  wedding celebrations and Taj Mahal visits.
-                </p>
+
+                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                  <div className="flex items-center mb-4">
+                    <Thermometer className="text-blue-500 mr-3" size={24} />
+                    <span className="text-lg font-semibold text-luxury-navy">
+                      Temperature Range
+                    </span>
+                  </div>
+                  <p className="text-gray-600">
+                    Winter: 18-32°C (64-90°F) | Summer: 24-35°C (75-95°F) |
+                    Pleasant: Oct-Mar (Perfect for celebrations)
+                  </p>
+                </div>
               </div>
             </motion.div>
 
@@ -288,7 +306,7 @@ function Agra() {
             >
               <img
                 src={Weather}
-                alt="Agra Weather and Taj Mahal"
+                alt="Kerala Backwater Weather"
                 className="rounded-2xl shadow-xl"
               />
             </motion.div>
@@ -296,8 +314,8 @@ function Agra() {
         </div>
       </section>
 
-      {/* Why Wedding in Agra Section */}
-      <section className="pt-16 pb-10 bg-white">
+      {/* Why Wedding in Kerala Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -306,28 +324,28 @@ function Agra() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-luxury-navy mb-6 tracking-wider">
-              WHY&nbsp;WEDDING&nbsp;IN&nbsp;AGRA?
+              WHY&nbsp;WEDDING&nbsp;IN&nbsp;KERALA?
             </h2>
             <div className="w-20 h-1 bg-blue-900 mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Agra, the romantic city of India, home to most prominent
-              attractions like Taj Mahal - a symbol of love is one of the best
-              destinations to tie the knot with a lavish, royal and magical
-              experience!
+              A home to variety of cultures and religions, Kerala is the perfect
+              place to embark on a new beginning with nature on its finest show.
+              Experience God's own country with its serene backwaters and lush
+              landscapes.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {whyAgra.map((reason, index) => (
+            {whyKerala.map((reason, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="text-center bg-gray-100 p-8 rounded-xl border border-gray-100 hover:border-blue-900 hover:shadow-md transition-all duration-300"
+                className="text-center bg-gray-50 p-8 rounded-xl border border-gray-100 hover:border-blue-900 hover:shadow-md transition-all duration-300"
               >
-                <div className="text-red-600 mb-6 flex justify-center">
+                <div className="text-blue-900 mb-6 flex justify-center">
                   <reason.icon size={48} />
                 </div>
                 <h3 className="text-xl font-semibold text-luxury-navy mb-4">
@@ -342,12 +360,8 @@ function Agra() {
         </div>
       </section>
 
-      <div>
-        {" "}
-        <img src={agra} alt="" />
-      </div>
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-luxury-navy to-luxury-green">
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-teal-600">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -355,20 +369,22 @@ function Agra() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready for Your Romantic Wedding?
+              Ready for Your God's Own Country Wedding?
             </h2>
-            <p className="text-lg text-pink-100 mb-8 mx-auto">
-              Let us help you plan the perfect destination wedding in the
-              romantic city of Agra, with the majestic Taj Mahal as your
-              backdrop.
+            <p className="text-lg text-cyan-100 mb-8 mx-auto max-w-3xl">
+              Let us help you plan the perfect destination wedding in Kerala,
+              where serene backwaters, lush greenery, and cultural diversity
+              create an unforgettable celebration in nature's finest setting.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white hover:bg-blue-900 text-blue-900 hover:text-white px-6 py-3 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              Plan Your Agra Wedding
-            </motion.button>
+            <Link to="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-blue-900 hover:bg-blue-800 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Plan Your Kerala Wedding
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -378,4 +394,4 @@ function Agra() {
   );
 }
 
-export default Agra;
+export default Kerala;

@@ -13,6 +13,7 @@ import {
 import { Link } from 'react-router-dom';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
+import amarvillas_agra from '../Assets/destination/amarvillas.jpg'; // Ensure you have this image in your assets folder
 
 const Destinations = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -43,7 +44,7 @@ const Destinations = () => {
       id: 2,
       name: 'Agra, India',
       category: 'historic',
-      image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: amarvillas_agra,
       description: 'Home to the Taj Mahal, the ultimate symbol of love, perfect for romantic wedding celebrations.',
       rating: 4.9,
       events: 130,

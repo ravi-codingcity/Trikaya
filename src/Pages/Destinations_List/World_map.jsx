@@ -14,6 +14,14 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
+import amarvillas_agra from "../../Assets/destination/amarvillas.jpg";
+import udaivillas_udaipur from "../../Assets/destination/udaivillas.jpg";
+import itcmaurya_delhi from "../../Assets/destination/itcmaurya_delhi.jpg";
+import theleelapalace_jaipur from "../../Assets/destination/jaipur/leelaplace_jaipur.jpg";
+import hyatt from "../../assets/destination/goa/hyatt.jpg";
+import taj from "../../assets/destination/jim_corbett/taj.jpg"; 
+import umaid from "../../assets/destination/jodhpur/umaid.jpg";
+import surya from "../../assets/destination/jaisalmer/surya.jpg";
 
 // Component to control the map view - flyTo animation
 const MapController = ({ center, zoom }) => {
@@ -92,6 +100,8 @@ const MapController = ({ center, zoom }) => {
 const WorldMap = () => {
   const navigate = useNavigate();
   const [hoveredLocation, setHoveredLocation] = useState(null);
+  const [clickedLocation, setClickedLocation] = useState(null);
+  const [persistentPopup, setPersistentPopup] = useState(false);
   const mapRef = useRef(null);
   const [selectedDestination, setSelectedDestination] = useState(null);
 
@@ -121,7 +131,19 @@ const WorldMap = () => {
       route: "/destinations/agra",
       color: "#f44336",
       image:
-        "https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+       amarvillas_agra,
+    },
+    {
+      id: "jaipur",
+      name: "Jaipur",
+      country: "India",
+      description: "Pink City - Royal palaces and heritage weddings",
+      lat: 26.9124,
+      lng: 75.7873,
+      route: "/destinations/jaipur",
+      color: "#e91e63",
+      image:
+        theleelapalace_jaipur,
     },
     {
       id: "delhi",
@@ -130,10 +152,10 @@ const WorldMap = () => {
       description: "Capital celebrations in grand venues",
       lat: 28.7041,
       lng: 77.1025,
-      route: "/destinations",
+      route: "/destinations/delhi",
       color: "#2196f3",
       image:
-        "https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        itcmaurya_delhi,
     },
     {
       id: "udaipur",
@@ -142,12 +164,46 @@ const WorldMap = () => {
       description: "City of Lakes - Romantic lakeside ceremonies",
       lat: 24.5854,
       lng: 73.7125,
-      route: "/destinations",
+      route: "/destinations/udaipur",
       color: "#4caf50",
       image:
-        "https://images.unsplash.com/photo-1609137144813-7d9921338f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        udaivillas_udaipur,
     },
-
+    {
+      id: "jodhpur",
+      name: "Jodhpur",
+      country: "India",
+      description: "Blue City - Majestic forts and royal celebrations",
+      lat: 26.2389,
+      lng: 73.0243,
+      route: "/destinations/jodhpur",
+      color: "#3f51b5",
+      image:
+        umaid,
+    },
+    {
+      id: "jaisalmer",
+      name: "Jaisalmer",
+      country: "India",
+      description: "Golden City - Desert weddings with royal grandeur",
+      lat: 26.9157,
+      lng: 70.9083,
+      route: "/destinations/jaisalmer",
+      color: "#ff9800",
+      image: surya,
+    },
+    {
+      id: "chandigarh",
+      name: "Chandigarh",
+      country: "India",
+      description: "City Beautiful - Modern venues with garden settings",
+      lat: 30.7333,
+      lng: 76.7794,
+      route: "/destinations",
+      color: "#8bc34a",
+      image:
+        "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    },
     {
       id: "bangalore",
       name: "Bangalore",
@@ -171,6 +227,77 @@ const WorldMap = () => {
       color: "#607d8b",
       image:
         "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    },
+    {
+      id: "goa",
+      name: "Goa",
+      country: "India",
+      description: "Beach weddings - Pristine shores and luxury resorts",
+      lat: 15.2993,
+      lng: 74.1240,
+      route: "/destinations/goa",
+      color: "#00bcd4",
+      image: hyatt,
+    },
+    {
+      id: "jim-corbett",
+      name: "Jim Corbett",
+      country: "India",
+      description: "Wilderness weddings - Nature's grandeur and wildlife sanctuary",
+      lat: 29.3892,
+      lng: 78.7636,
+      route: "/destinations/jim-corbett",
+      color: "#10b981",
+      image:
+        taj,
+    },
+    {
+      id: "mussoorie",
+      name: "Mussoorie",
+      country: "India",
+      description: "Queen of the Hills - Majestic mountain views and luxury venues",
+      lat: 30.4598,
+      lng: 78.0664,
+      route: "/destinations/mussoorie",
+      color: "#3b82f6",
+      image:
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    },
+    {
+      id: "shimla",
+      name: "Shimla",
+      country: "India",
+      description: "Off beat destination - Colonial charm and natural splendor",
+      lat: 31.1048,
+      lng: 77.1734,
+      route: "/destinations/shimla",
+      color: "#8b5cf6",
+      image:
+        "https://images.unsplash.com/photo-1578774204375-826dc5d073f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    },
+    {
+      id: "kerala",
+      name: "Kerala",
+      country: "India",
+      description: "God's Own Country - Backwater weddings with serene natural beauty",
+      lat: 10.8505,
+      lng: 76.2711,
+      route: "/destinations/kerala",
+      color: "#059669",
+      image:
+        "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    },
+    {
+      id: "huahin",
+      name: "Hua Hin",
+      country: "Thailand",
+      description: "Thai Summer Palaces - OG beach resort city with royal heritage",
+      lat: 12.5684,
+      lng: 99.9576,
+      route: "/destinations/hua_hin",
+      color: "#dc2626",
+      image:
+        "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
     },
     {
       id: "turkey",
@@ -212,6 +339,42 @@ const WorldMap = () => {
         "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
     },
     {
+      id: "abudhabi",
+      name: "Abu Dhabi",
+      country: "UAE",
+      description: "Hub of Destination Weddings - Modern luxury with Arabian elegance",
+      lat: 24.4539,
+      lng: 54.3773,
+      route: "/destinations/abu_dhabi",
+      color: "#d97706",
+      image:
+        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    },
+    {
+      id: "dubai",
+      name: "Dubai",
+      country: "UAE",
+      description: "Arabian Sky Weddings - Perfect luxury with world-class tourism",
+      lat: 25.2048,
+      lng: 55.2708,
+      route: "/destinations/dubai",
+      color: "#eab308",
+      image:
+        "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    },
+    {
+      id: "phuket",
+      name: "Phuket",
+      country: "Thailand",
+      description: "Ultimate Tropical Oasis - Paradise destination with white sand beaches",
+      lat: 7.8804,
+      lng: 98.3923,
+      route: "/destinations/phuket",
+      color: "#14b8a6",
+      image:
+        "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    },
+    {
       id: "france",
       name: "Paris",
       country: "France",
@@ -226,12 +389,39 @@ const WorldMap = () => {
   ];
 
   const handleLocationClick = (destination) => {
+    console.log('🎯 Destination clicked:', destination.name, '-> Navigating to:', destination.route);
     setSelectedDestination(destination);
+    setClickedLocation(destination);
+    setPersistentPopup(true);
+    setHoveredLocation(null); // Clear hover state when clicked
 
-    // Navigate after a slight delay to allow the map animation to play
+    // Navigate immediately for direct marker clicks
+    navigate(destination.route);
+  };
+
+  const handleLocationHover = (destination) => {
+    if (!persistentPopup) {
+      setHoveredLocation(destination);
+    }
+  };
+
+  const handleLocationHoverOut = () => {
+    if (!persistentPopup) {
+      setHoveredLocation(null);
+    }
+  };
+
+  const handlePopupClose = () => {
+    setPersistentPopup(false);
+    setClickedLocation(null);
+    setHoveredLocation(null);
+  };
+
+  const handleExploreClick = (destination) => {
+    setSelectedDestination(destination);
     setTimeout(() => {
       navigate(destination.route);
-    }, 800);
+    }, 300);
   };
 
   // Create custom icons for map markers
@@ -241,18 +431,24 @@ const WorldMap = () => {
       html: `
         <div style="
           background-color: ${color}; 
-          width: 24px; 
-          height: 24px; 
+          width: 28px; 
+          height: 28px; 
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          border: 2px solid white;
-          box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+          border: 3px solid white;
+          box-shadow: 0 3px 8px rgba(0,0,0,0.4);
           position: relative;
-        ">
-          <div style="color: white; font-size: 12px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          cursor: pointer;
+          transition: all 0.3s ease;
+        "
+        onmouseover="this.style.transform='scale(1.2)'; this.style.zIndex='1000';"
+        onmouseout="this.style.transform='scale(1)'; this.style.zIndex='auto';"
+        onclick="this.style.transform='scale(0.95)';"
+        >
+          <div style="color: white; font-size: 14px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
@@ -262,18 +458,19 @@ const WorldMap = () => {
               ? `
             <div style="
               position: absolute; 
-              top: -4px; 
-              right: -4px; 
+              top: -5px; 
+              right: -5px; 
               background-color: #fbbf24; 
-              width: 10px; 
-              height: 10px; 
+              width: 12px; 
+              height: 12px; 
               border-radius: 50%; 
-              border: 1px solid white;
+              border: 2px solid white;
               display: flex;
               align-items: center;
               justify-content: center;
+              box-shadow: 0 2px 4px rgba(0,0,0,0.3);
             ">
-              <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 24 24" fill="#7c2d12" stroke="#7c2d12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 24 24" fill="#7c2d12" stroke="#7c2d12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
               </svg>
             </div>
@@ -282,9 +479,9 @@ const WorldMap = () => {
           }
         </div>
       `,
-      iconSize: [24, 24],
-      iconAnchor: [12, 24],
-      popupAnchor: [0, -24],
+      iconSize: [28, 28],
+      iconAnchor: [14, 28],
+      popupAnchor: [0, -28],
     });
   };
 
@@ -334,7 +531,7 @@ const WorldMap = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-2">
               <div className="inline-flex items-center justify-center bg-luxury-gold/10 text-luxury-navy px-4 py-2 rounded-full text-sm">
                 <Star size={16} className="text-luxury-gold mr-2" />
-                <span>Click on any marker to explore destination details</span>
+                <span>Click on any marker to instantly visit destination page</span>
               </div>
               <div className="inline-flex items-center justify-center bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm">
                 <Globe size={16} className="text-blue-600 mr-2" />
@@ -392,8 +589,8 @@ const WorldMap = () => {
                         isInternational
                       )}
                       eventHandlers={{
-                        mouseover: () => setHoveredLocation(destination),
-                        mouseout: () => setHoveredLocation(null),
+                        mouseover: () => handleLocationHover(destination),
+                        mouseout: () => handleLocationHoverOut(),
                         click: () => handleLocationClick(destination),
                       }}
                     >
@@ -409,7 +606,7 @@ const WorldMap = () => {
                             {destination.description}
                           </p>
                           <button
-                            onClick={() => handleLocationClick(destination)}
+                            onClick={() => handleExploreClick(destination)}
                             className="mt-2 text-xs bg-luxury-gold hover:bg-luxury-darkGold text-white px-3 py-1 rounded-full w-full"
                           >
                             Explore
@@ -422,7 +619,7 @@ const WorldMap = () => {
               </MapContainer>
 
               {/* Enhanced Tooltip - positioned absolutely over the map */}
-              {hoveredLocation && (
+              {(hoveredLocation || (persistentPopup && clickedLocation)) && (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8, y: 10 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -434,21 +631,48 @@ const WorldMap = () => {
                     width: "280px",
                   }}
                 >
+                  {/* Close button for persistent popup */}
+                  {persistentPopup && (
+                    <button
+                      onClick={handlePopupClose}
+                      className="absolute top-2 right-2 z-10 bg-gray-100 hover:bg-gray-200 rounded-full p-1 transition-colors duration-200"
+                      title="Close popup"
+                    >
+                      <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        width="16" 
+                        height="16" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        strokeWidth="2" 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round"
+                        className="text-gray-600"
+                      >
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </button>
+                  )}
+
                   {/* Image header */}
                   <div
                     className="h-32 bg-cover bg-center relative"
-                    style={{ backgroundImage: `url(${hoveredLocation.image})` }}
+                    style={{ 
+                      backgroundImage: `url(${(persistentPopup && clickedLocation) ? clickedLocation.image : hoveredLocation?.image})` 
+                    }}
                   >
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute bottom-3 left-4 text-white">
                       <h3 className="font-bold text-lg">
-                        {hoveredLocation.name}
+                        {(persistentPopup && clickedLocation) ? clickedLocation.name : hoveredLocation?.name}
                       </h3>
                       <p className="text-sm opacity-90">
-                        {hoveredLocation.country}
+                        {(persistentPopup && clickedLocation) ? clickedLocation.country : hoveredLocation?.country}
                       </p>
                     </div>
-                    {!["India"].includes(hoveredLocation.country) && (
+                    {!["India"].includes((persistentPopup && clickedLocation) ? clickedLocation.country : hoveredLocation?.country) && (
                       <div className="absolute top-3 right-3 bg-luxury-gold text-white px-2 py-1 rounded-full text-xs font-medium flex items-center">
                         <Star size={12} className="mr-1" />
                         International
@@ -459,17 +683,33 @@ const WorldMap = () => {
                   {/* Content */}
                   <div className="p-4">
                     <p className="text-gray-700 mb-4 text-sm leading-relaxed">
-                      {hoveredLocation.description}
+                      {(persistentPopup && clickedLocation) ? clickedLocation.description : hoveredLocation?.description}
                     </p>
                     <motion.button
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      onClick={() => handleLocationClick(hoveredLocation)}
+                      onClick={() => handleExploreClick((persistentPopup && clickedLocation) ? clickedLocation : hoveredLocation)}
                       className="w-full bg-gradient-to-r from-luxury-gold to-luxury-darkGold text-white px-4 py-2.5 rounded-lg text-sm font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2"
                     >
                       <Heart size={14} />
-                      <span>Explore {hoveredLocation.name}</span>
+                      <span>Explore {(persistentPopup && clickedLocation) ? clickedLocation.name : hoveredLocation?.name}</span>
                     </motion.button>
+                    
+                    {/* Additional interactive elements for persistent popup */}
+                    {persistentPopup && clickedLocation && (
+                      <div className="mt-3 pt-3 border-t border-gray-100">
+                        <div className="flex items-center justify-between text-xs text-gray-500">
+                          <span>Click to explore destination</span>
+                          <div className="flex items-center space-x-1">
+                            <div 
+                              className="w-2 h-2 rounded-full" 
+                              style={{ backgroundColor: clickedLocation.color }}
+                            ></div>
+                            <span>{clickedLocation.country}</span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </motion.div>
               )}

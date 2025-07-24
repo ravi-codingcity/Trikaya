@@ -12,143 +12,137 @@ import {
   Sun,
   Thermometer,
   ArrowLeft,
+  Landmark,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import Weather from "../../assets/Weather.avif";
-import agra from "../../assets/agra.png";
-import amarvillas_agra from "../../assets/destination/amarvillas.jpg";
-import itcmughal_agra from "../../assets/destination/itcmughal_agra.png";
-import jaypee_agra from "../../assets/destination/jaypee_agra.jpg";
-import tajhotel_agra from "../../assets/destination/tajhotel_agra.jpg";
-import marriott_agra from "../../assets/destination/marriott_agra.jpg";
-import trident_agra from "../../assets/destination/trident_agra.jpg";
+import itcGrandBharat from "../../assets/destination/delhi/itc-grand-bharat.jpg";
+import the_leela_palace from "../../assets/destination/delhi/the_leela_palace.jpg";
+import itcmaurya_delhi from "../../Assets/destination/itcmaurya_delhi.jpg";
+import imperial from "../../assets/destination/delhi/imperial.jpg";
+import roseate from "../../assets/destination/delhi/roseate.jpg";
+import oberoi from "../../assets/destination/delhi/oberoi.jpg";
 
-function Agra() {
+function Delhi() {
   const hotels = [
     {
       id: 1,
-      name: "Amar Vilas",
-      rooms: 102,
-      eventSpaces: 9,
+      name: "ITC Grand Bharat",
+      rooms: 100,
+      eventSpaces: 4,
       description:
-        "Having an uninterrupted view of the monument of love - Taj Mahal, The Oberoi Amarvillas adds the essence of regal touch and splendour to your wedding celebration!",
-      image:
-        amarvillas_agra,
+        "Get married in the contemporary and architectural surroundings of the magnificent ITC Grand Bharat, Gurugram and make your D-day unforgettable!",
+      image: itcGrandBharat,
       features: [
-        "Taj Mahal View",
-        "Regal Touch",
-        "Luxury Suites",
-        "Splendid Architecture",
+        "Contemporary Design",
+        "Architectural Marvel",
+        "Magnificent Setting",
+        "Unforgettable Experience",
       ],
     },
     {
       id: 2,
-      name: "ITC Mughal",
-      rooms: 233,
-      eventSpaces: 4,
+      name: "The Imperial",
+      rooms: 235,
+      eventSpaces: 3,
       description:
-        "The ITC Mughal, Agra is where royalty and culture of Indian history come together. An extravagant wedding at this magnificent property is a dream come true!",
-      image:
-        itcmughal_agra,
+        "With old style and magnificent essence, The Imperial has both indoor and outdoor venues, and is an iconic property to get married!",
+      image: imperial,
       features: [
-        "Royal Heritage",
-        "Cultural Ambiance",
-        "Magnificent Property",
-        "Historical Significance",
+        "Old Style Essence",
+        "Indoor & Outdoor",
+        "Iconic Property",
+        "Magnificent Heritage",
       ],
     },
     {
       id: 3,
-      name: "Taj Hotel & Convention",
-      rooms: 239,
+      name: "The Roseate",
+      rooms: 60,
       eventSpaces: 3,
       description:
-        "Experience the backdrop of the monument of love - The Taj Mahal, at the Taj Hotel and Convention, Agra or the grand exquisite indoor spaces on your big day!",
-      image:
-        tajhotel_agra,
+        "The picture perfect destination with comfort, luxury and both indoor and outdoor venues - The Roseate New Delhi is one of the beautiful properties in the capital to tie the knot!",
+      image: roseate,
       features: [
-        "Taj Mahal Backdrop",
-        "Exquisite Interiors",
-        "Convention Facilities",
-        "Grand Spaces",
+        "Picture Perfect",
+        "Comfort & Luxury",
+        "Beautiful Property",
+        "Capital's Finest",
       ],
     },
     {
       id: 4,
-      name: "Jaypee Palace",
-      rooms: 341,
-      eventSpaces: 5,
+      name: "The Leela Palace",
+      rooms: 254,
+      eventSpaces: 4,
       description:
-        "Get hitched at an all in one property - Jaypee Palace, Agra that displays Mughal and contemporary architecture, greenery and enormous water bodies!",
-      image:
-       jaypee_agra,
+        "The Leela Palace, Chanakyapuri is known for its grandeur and beauty which makes it a perfect venue to host a wedding that is remembered by all!",
+      image: the_leela_palace,
       features: [
-        "Mughal Architecture",
-        "Contemporary Design",
-        "Lush Greenery",
-        "Water Features",
+        "Grandeur & Beauty",
+        "Perfect Venue",
+        "Memorable Wedding",
+        "Chanakyapuri Location",
       ],
     },
     {
       id: 5,
-      name: "Marriott",
-      rooms: 189,
-      eventSpaces: 3,
+      name: "ITC Maurya",
+      rooms: 437,
+      eventSpaces: 5,
       description:
-        "The colonial charm, wealth of the premise and the most picturesque backdrop, make Marriott the perfect venue for a big fat wedding!",
-      image:
-        marriott_agra,
+        "Get hitched at the ITC Maurya, Chanakyapuri if you've always wished for a royal wedding without missing out the classiness and contemporary details!",
+      image: itcmaurya_delhi,
       features: [
-        "Colonial Charm",
-        "Picturesque Backdrop",
-        "Luxurious Premise",
-        "Grand Celebrations",
+        "Royal Wedding",
+        "Classiness",
+        "Contemporary Details",
+        "Premium Location",
       ],
     },
     {
       id: 6,
-      name: "Trident",
-      rooms: 135,
+      name: "The Oberoi",
+      rooms: 202,
       eventSpaces: 3,
       description:
-        "Treat your loved ones to an all-new experience at a luxurious place with exceptional hospitality and world-class amenities.",
-      image:
-        trident_agra,
+        "The Oberoi Gurgaon is one of the most luxurious venues to host a charming wedding celebration with an essence of modernity and architecture!",
+      image: oberoi,
       features: [
-        "Luxurious Setting",
-        "Exceptional Hospitality",
-        "World-class Amenities",
-        "Premium Experience",
+        "Most Luxurious",
+        "Charming Celebration",
+        "Modern Essence",
+        "Architectural Beauty",
       ],
     },
   ];
 
-  const whyAgra = [
-    {
-      icon: Heart,
-      title: "City of Love",
-      description:
-        "Home to the Taj Mahal, the ultimate symbol of eternal love and romance.",
-    },
-    {
-      icon: Crown,
-      title: "Royal Heritage",
-      description:
-        "Rich Mughal history with magnificent palaces and architectural wonders.",
-    },
+  const whyDelhi = [
     {
       icon: Building,
-      title: "Prominent Attractions",
+      title: "Urban Setting",
       description:
-        "Iconic monuments and historical sites that create magical backdrops.",
+        "Delhi NCR is a great place to host a wedding in an urban setting that has everything you've dreamt of!",
+    },
+    {
+      icon: Landmark,
+      title: "Heritage Tourist Spots",
+      description:
+        "From great venues to heritage tourist spots, Delhi offers rich cultural backdrops for your wedding.",
+    },
+    {
+      icon: Heart,
+      title: "Delicious Food",
+      description:
+        "Experience the best of Indian cuisine and street food culture that Delhi is famous for worldwide.",
     },
     {
       icon: Star,
-      title: "Lavish Experience",
+      title: "All Budget Venues",
       description:
-        "Perfect destination for royal, magical, and unforgettable wedding celebrations.",
+        "From pocket friendly to grand wedding venues, Delhi NCR has it all, after all, it's known for its beauty all around the world!",
     },
   ];
 
@@ -157,8 +151,8 @@ function Agra() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-10 pb-14 bg-gradient-to-b bg-gray-100 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-amber-50 to-orange-50 opacity-30"></div>
+      <section className="pt-10 pb-20 bg-gradient-to-b from-red-50 to-orange-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-red-50 to-orange-50 opacity-30"></div>
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -167,19 +161,20 @@ function Agra() {
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-luxury-navy mb-6 tracking-wider">
-              AGRA
+              DELHI NCR
             </h1>
             <div className="w-24 h-1 bg-blue-900 mx-auto mb-8"></div>
             <p className="text-lg md:text-lg text-gray-600 max-w-5xl mx-auto leading-relaxed">
-              Agra is all about romance, heritage and history, offering pleasing
-              surroundings for getting married in style!
+              Delhi NCR is a great place to host a wedding in an urban setting
+              that has everything you've dreamt of - from great venues to
+              heritage tourist spots to delicious food!
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Top Hotels Section */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -211,7 +206,7 @@ function Agra() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute bottom-4 left-4">
-                    <h3 className="text-2xl font-bold text-white mb-2">
+                    <h3 className="text-xl font-bold text-white mb-2">
                       {hotel.name}
                     </h3>
                   </div>
@@ -239,7 +234,7 @@ function Agra() {
                     {hotel.features.map((feature, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-pink-50 text-gray-600 text-xs rounded-full border border-pink-100"
+                        className="px-3 py-1 bg-red-50 text-gray-600 text-xs rounded-full border border-red-100"
                       >
                         {feature}
                       </span>
@@ -253,7 +248,7 @@ function Agra() {
       </section>
 
       {/* Weather Section */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -266,17 +261,33 @@ function Agra() {
               </h2>
               <div className="w-16 h-1 bg-blue-900 mb-6"></div>
 
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <div className="flex items-center mb-4">
-                  <Sun className="text-blue-900 mr-3" size={24} />
-                  <span className="text-lg font-semibold text-luxury-navy">
-                    Best Season
-                  </span>
+              <div className="space-y-4">
+                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                  <div className="flex items-center mb-4">
+                    <Sun className="text-blue-900 mr-3" size={24} />
+                    <span className="text-lg font-semibold text-luxury-navy">
+                      Best Season
+                    </span>
+                  </div>
+                  <p className="text-gray-600">
+                    Delhi the best time is from October to March. The weather
+                    during these months is pleasant and proper to host either an
+                    outdoor day wedding or evening poolside ceremony.
+                  </p>
                 </div>
-                <p className="text-gray-600">
-                  October to March offers pleasant weather perfect for outdoor
-                  wedding celebrations and Taj Mahal visits.
-                </p>
+
+                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                  <div className="flex items-center mb-4">
+                    <Thermometer className="text-blue-500 mr-3" size={24} />
+                    <span className="text-lg font-semibold text-luxury-navy">
+                      Temperature Range
+                    </span>
+                  </div>
+                  <p className="text-gray-600">
+                    Winter: 8-25°C (46-77°F) | Summer: 25-40°C (77-104°F) |
+                    Monsoon: 25-35°C (77-95°F)
+                  </p>
+                </div>
               </div>
             </motion.div>
 
@@ -288,7 +299,7 @@ function Agra() {
             >
               <img
                 src={Weather}
-                alt="Agra Weather and Taj Mahal"
+                alt="Delhi Weather and Monuments"
                 className="rounded-2xl shadow-xl"
               />
             </motion.div>
@@ -296,8 +307,8 @@ function Agra() {
         </div>
       </section>
 
-      {/* Why Wedding in Agra Section */}
-      <section className="pt-16 pb-10 bg-white">
+      {/* Why Wedding in Delhi Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -306,26 +317,26 @@ function Agra() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-luxury-navy mb-6 tracking-wider">
-              WHY&nbsp;WEDDING&nbsp;IN&nbsp;AGRA?
+              WHY&nbsp;WEDDING&nbsp;IN&nbsp;DELHI?
             </h2>
             <div className="w-20 h-1 bg-blue-900 mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Agra, the romantic city of India, home to most prominent
-              attractions like Taj Mahal - a symbol of love is one of the best
-              destinations to tie the knot with a lavish, royal and magical
-              experience!
+              From pocket friendly to grand wedding venues, Delhi NCR has it
+              all, after all, it's known for its beauty all around the world!
+              Experience the perfect blend of heritage, modernity, and
+              hospitality.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {whyAgra.map((reason, index) => (
+            {whyDelhi.map((reason, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="text-center bg-gray-100 p-8 rounded-xl border border-gray-100 hover:border-blue-900 hover:shadow-md transition-all duration-300"
+                className="text-center bg-gray-50 p-8 rounded-xl border border-gray-100 hover:border-blue-900 hover:shadow-md transition-all duration-300"
               >
                 <div className="text-red-600 mb-6 flex justify-center">
                   <reason.icon size={48} />
@@ -342,12 +353,8 @@ function Agra() {
         </div>
       </section>
 
-      <div>
-        {" "}
-        <img src={agra} alt="" />
-      </div>
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-luxury-navy to-luxury-green">
+      <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -355,20 +362,22 @@ function Agra() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready for Your Romantic Wedding?
+              Ready for Your Capital Wedding?
             </h2>
-            <p className="text-lg text-pink-100 mb-8 mx-auto">
-              Let us help you plan the perfect destination wedding in the
-              romantic city of Agra, with the majestic Taj Mahal as your
-              backdrop.
+            <p className="text-lg text-red-100 mb-8 mx-auto max-w-3xl">
+              Let us help you plan the perfect destination wedding in Delhi NCR,
+              where heritage meets modernity and every celebration becomes a
+              grand affair in India's capital region.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white hover:bg-blue-900 text-blue-900 hover:text-white px-6 py-3 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              Plan Your Agra Wedding
-            </motion.button>
+            <Link to="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-white hover:bg-blue-900 text-blue-900 hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Plan Your Delhi Wedding
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -378,4 +387,4 @@ function Agra() {
   );
 }
 
-export default Agra;
+export default Delhi;

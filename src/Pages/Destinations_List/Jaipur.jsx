@@ -18,6 +18,12 @@ import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import Weather from "../../assets/Weather.avif";
 import jaipur from "../../assets/jaipur.png"; // Assuming you have a jaipur image in assets
+import theleelapalace_jaipur  from "../../assets/destination/jaipur/leelaplace_jaipur.jpg"; 
+import fairmont from "../../assets/destination/jaipur/fairmont.jpg"; 
+import rambaghpalace from "../../assets/destination/jaipur/rambaghpalace.jpg"; 
+import hyatt_regency from "../../assets/destination/jaipur/hyatt_regency.jpg"; 
+import alila_fort_bishangarh from "../../assets/destination/jaipur/alila_fort_bishangarh.jpg"; 
+import jai_mahal_palace from "../../assets/destination/jaipur/jai_mahal_palace.jpg"; 
 
 function Jaipur() {
   const hotels = [
@@ -29,7 +35,7 @@ function Jaipur() {
       description:
         "The hallmarks of the brand Fairmont are its impressive decor, architecture, services! This property focuses on connecting its guests to extraordinary places.",
       image:
-        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        fairmont,
       features: [
         "Impressive Decor",
         "Luxury Architecture",
@@ -45,7 +51,7 @@ function Jaipur() {
       description:
         "If splendour and luxury is what you wish to experience in your dream wedding, then the grandeur of this golden land of Rajasthan - Rambagh is the right place for you to get hitched!",
       image:
-        "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        rambaghpalace,
       features: [
         "Royal Heritage",
         "Luxury Suites",
@@ -61,7 +67,7 @@ function Jaipur() {
       description:
         "Jai Mahal Palace offers a perfect venue for your fairy tale wedding with a pinch of picturesque exuberance of royalty!",
       image:
-        "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        jai_mahal_palace,
       features: [
         "Fairy Tale Setting",
         "Royal Exuberance",
@@ -77,7 +83,7 @@ function Jaipur() {
       description:
         "The Leela Palace Jaipur is known for memorable weddings providing 50,000 square feet of indoor and outdoor celebrations space - Grand Ballroom and Verdant Lawns.",
       image:
-        "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        theleelapalace_jaipur,
       features: [
         "Grand Ballroom",
         "Verdant Lawns",
@@ -93,7 +99,7 @@ function Jaipur() {
       description:
         "That flamboyance of Rajasthani architecture and heritage is all you need for your extravagant wedding at Hyatt Regency Jaipur Mansarovar.",
       image:
-        "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        hyatt_regency,
       features: [
         "Rajasthani Architecture",
         "Heritage Design",
@@ -109,7 +115,7 @@ function Jaipur() {
       description:
         "The best property that offers heavenly views - Alila Fort, Bishangarh, is known for hosting grand royal weddings connecting you with the roots of Rajasthan and its history!",
       image:
-        "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        alila_fort_bishangarh,
       features: [
         "Heavenly Views",
         "Royal Weddings",
@@ -163,7 +169,7 @@ function Jaipur() {
             <h1 className="text-4xl md:text-6xl font-bold text-luxury-navy mb-6 tracking-wider">
               JAIPUR
             </h1>
-            <div className="w-28 h-1 bg-luxury-gold mx-auto mb-6"></div>
+            <div className="w-28 h-1 bg-blue-900 mx-auto mb-6"></div>
             <p className="text-lg md:text-lg text-gray-600 max-w-5xl mx-auto leading-relaxed">
               A dream of grand and royal wedding in an architecturally opulent
               city can be fulfilled by choosing Jaipur - The Pink City!
@@ -184,7 +190,7 @@ function Jaipur() {
             <h2 className="text-2xl md:text-4xl font-bold text-luxury-navy mb-4 tracking-wider">
               TOP&nbsp;HOTELS
             </h2>
-            <div className="w-20 h-1 bg-luxury-gold mx-auto"></div>
+            <div className="w-20 h-1 bg-blue-900 mx-auto"></div>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -195,7 +201,7 @@ function Jaipur() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:border-luxury-gold hover:shadow-xl transition-all duration-300 group"
+                className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:border-blue-900 hover:shadow-xl transition-all duration-300 group"
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -214,11 +220,11 @@ function Jaipur() {
                 <div className="p-6">
                   <div className="flex justify-between items-center mb-4">
                     <div className="flex items-center text-gray-600">
-                      <Bed size={18} className="mr-2 text-luxury-gold" />
+                      <Bed size={18} className="mr-2 text-blue-900" />
                       <span className="font-medium">{hotel.rooms} Rooms</span>
                     </div>
                     <div className="flex items-center text-gray-600">
-                      <Building size={18} className="mr-2 text-luxury-gold" />
+                      <Building size={18} className="mr-2 text-blue-900" />
                       <span className="font-medium">
                         {hotel.eventSpaces} Event Spaces
                       </span>
@@ -258,11 +264,11 @@ function Jaipur() {
               <h2 className="text-3xl md:text-4xl font-bold text-luxury-navy mb-6 tracking-wider">
                 WEATHER
               </h2>
-              <div className="w-16 h-1 bg-luxury-gold mb-6"></div>
+              <div className="w-16 h-1 bg-blue-900 mb-6"></div>
 
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <div className="flex items-center mb-4">
-                  <Sun className="text-luxury-gold mr-3" size={24} />
+                  <Sun className="text-blue-900 mr-3" size={24} />
                   <span className="text-lg font-semibold text-luxury-navy">
                     Best Season
                   </span>
@@ -301,7 +307,7 @@ function Jaipur() {
             <h2 className="text-3xl md:text-5xl font-bold text-luxury-navy mb-6 tracking-wider">
               WHY&nbsp;WEDDING&nbsp;IN&nbsp;JAIPUR?
             </h2>
-            <div className="w-20 h-1 bg-luxury-gold mx-auto mb-8"></div>
+            <div className="w-20 h-1 bg-blue-900 mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Being one of the places connected to all major cities in India,
               Jaipur is all about history, grand venues and unique backdrops,
@@ -317,9 +323,9 @@ function Jaipur() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="text-center bg-gray-100 p-8 rounded-xl border border-gray-100 hover:border-luxury-gold hover:shadow-md transition-all duration-300"
+                className="text-center bg-gray-100 p-8 rounded-xl border border-gray-100 hover:border-blue-900 hover:shadow-md transition-all duration-300"
               >
-                <div className="text-luxury-gold mb-6 flex justify-center">
+                <div className="text-red-600 mb-6 flex justify-center">
                   <reason.icon size={48} />
                 </div>
                 <h3 className="text-xl font-semibold text-luxury-navy mb-4">
@@ -356,7 +362,7 @@ function Jaipur() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-luxury-gold hover:bg-luxury-darkGold text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-white hover:bg-blue-900 text-blue-900 hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Plan Your Jaipur Wedding
             </motion.button>
