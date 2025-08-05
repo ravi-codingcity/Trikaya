@@ -11,7 +11,7 @@ import Agra from "./Pages/Destinations_List/Agra";
 import Turkey from "./Pages/Destinations_List/Turkey";
 import Paris from "./Pages/Destinations_List/Paris";
 import WorldMap from "./Pages/Destinations_List/World_map";
-import RSVPManagement from "./Pages/Services/RSVP_management";
+import RSVPManagement from "./Pages/Services/Hospitality_RSVP_management";
 import "./App.css";
 import Udaipur from "./Pages/Destinations_List/Udaipur"; // Import Udaipur component
 import Goa from "./Pages/Destinations_List/Goa"; // Import Goa component
@@ -26,6 +26,10 @@ import Hua_Hin from "./Pages/Destinations_List/Hua_Hin"; // Import Hua Hin compo
 import Abu_dhabi from "./Pages/Destinations_List/Abu_dhabi"; // Import Abu Dhabi component
 import Dubai from "./Pages/Destinations_List/Dubai"; // Import Dubai component
 import Phuket from "./Pages/Destinations_List/Phuket"; // Import Phuket component
+import Join_our_team from "./Pages/Join_our_team"; // Import Join Our Team component
+import TravelManagementLogistics from "./Pages/Services/Travel_management_logistics";
+import EventFlowManagement from "./Pages/Services/Event_flow_management";
+import DestinationsVenue from "./Pages/Services/Destinations_venue";
 
 function App() {
   return (
@@ -59,6 +63,19 @@ function App() {
           <Route path="/destinations/abu_dhabi" element={<Abu_dhabi />} />
           <Route path="/destinations/dubai" element={<Dubai />} />
           <Route path="/destinations/phuket" element={<Phuket />} />
+          <Route path="/join-our-team" element={<Join_our_team />} />
+          <Route
+            path="/services/travel-management-logistics"
+            element={<TravelManagementLogistics />}
+          />
+          <Route
+            path="/services/event-flow-management"
+            element={<EventFlowManagement />}
+          />
+          <Route
+            path="/services/destinations-venue"
+            element={<DestinationsVenue />}
+          />
         </Routes>
         <ScrollToTop />
       </div>

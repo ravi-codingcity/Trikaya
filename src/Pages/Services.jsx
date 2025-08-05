@@ -18,8 +18,10 @@ import Footer from '../Components/Footer';
 import Services1 from '../assets/Services/services_1.jpg';
 import Services2 from '../assets/Services/services_2.jpg';
 import Services3 from '../assets/Services/services_3.jpg';
+import Music_img from '../assets/Services/services_9.jpg';
 import ServicesMain1 from '../assets/services_1.jpg';
 import ServicesMain2 from '../assets/services_2.jpg';
+import { link } from 'framer-motion/client';
 
 const Services = () => {
   const services = [
@@ -43,14 +45,16 @@ const Services = () => {
       title: 'Travel Management & Logistics',
       description: 'Comprehensive travel planning and logistics coordination for seamless event experiences.',
       features: ['Flight Bookings', 'Hotel Reservations', 'Ground Transportation', 'Travel Itineraries'],
-      image: Services1
+      image: Services1,
+      link: '/services/travel-management-logistics'
     },
     {
       icon: Settings,
       title: 'Event Flow & Management',
       description: 'Expert coordination and management to ensure your event runs flawlessly from start to finish.',
       features: ['Timeline Planning', 'Vendor Coordination', 'Day-of Management', 'Contingency Planning'],
-      image: Services2
+      image: Services2,
+      link: '/services/event-flow-management'
     },
     {
       icon: Lightbulb,
@@ -85,7 +89,8 @@ const Services = () => {
       title: 'Destination & Venue',
       description: 'Discover and secure the perfect venues for your special occasions.',
       features: ['Venue Scouting', 'Site Inspections', 'Booking Assistance', 'Layout Planning'],
-      image: Services2
+      image: Services2,
+      link: '/services/destinations-venue'
     },
     {
       icon: FileText,
@@ -100,6 +105,13 @@ const Services = () => {
       description: 'Professional grooming and garment care services for your special day.',
       features: ['Mobile Salon Services', 'Garment Care', 'Professional Styling', 'Equipment Rental'],
       image: ServicesMain1
+    },
+    {
+      icon: Music,
+      title: 'Music Licensing',
+      description: 'We can provide legal permission for Music license across India - IPRS, NOVEX & PPL',
+      features: ['Music Rights Management', 'Licensing Agreements', 'Royalty Collection', 'Legal Compliance'],
+      image: Music_img
     }
   ];
 

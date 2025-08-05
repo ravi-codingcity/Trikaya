@@ -24,6 +24,7 @@ import Services_5 from "./src/assets/Services_5.jpg";
 import Services_6 from "./src/assets/Services_6.jpg";
 import Services_7 from "./src/assets/Services_7.jpg";
 import Services_8 from "./src/assets/Services_8.jpg";
+import Services_9 from "./src/assets/Services_9.jpg";
 import Services from "./src/Pages/Services";
 import Logo_1 from "./src/assets/Logo/Logo_1.png";
 import Logo_2 from "./src/assets/Logo/Logo_2.png";
@@ -89,6 +90,12 @@ const Homepage = () => {
       title: "Destination & Venue",
       description:
         "Personalized keepsakes and custom gifts that reflect your style and gratitude.",
+    },
+     {
+      image: Services_9,
+      title: "Music Licensing",
+      description:
+        "We can provide legal permission for Music license across India - IPRS, NOVEX & PPL",
     },
   ];
 

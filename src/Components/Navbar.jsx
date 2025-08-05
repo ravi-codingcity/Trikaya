@@ -24,6 +24,7 @@ const Navbar = () => {
     { name: 'Services', href: '/services' },
     { name: 'Destinations', href: '/destinations' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Join Team', href: '/join-our-team' },
   ];
 
   const handleNavigation = (href) => {

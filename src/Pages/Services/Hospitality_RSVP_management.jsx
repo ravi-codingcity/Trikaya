@@ -147,7 +147,7 @@ const RSVPManagement = () => {
             <h1 className="text-3xl md:text-4xl font-bold text-luxury-navy mb-6 tracking-wider">
               HOSPITALITY & RSVP
             </h1>
-            <div className="w-32 h-1 bg-luxury-gold mx-auto mb-8"></div>
+            <div className="w-32 h-1 bg-blue-900 mx-auto mb-8"></div>
             <p className="text-lg md:text-lg text-gray-600 max-w-5xl mx-auto leading-relaxed">
               Guests are the charm of the wedding, don't they deserve the right
               "Khatirdari"? The Bandbaajaa team makes an effort to treat them
@@ -171,7 +171,7 @@ const RSVPManagement = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-luxury-navy mb-4">
               Complete Guest Care
             </h2>
-            <div className="w-20 h-1 bg-luxury-gold mx-auto"></div>
+            <div className="w-20 h-1 bg-blue-900 mx-auto"></div>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -182,9 +182,9 @@ const RSVPManagement = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="text-center bg-gray-50 p-8 rounded-xl border border-gray-100 hover:border-luxury-gold hover:shadow-md transition-all duration-300"
+                className="text-center bg-gray-50 p-8 rounded-xl border border-gray-100 hover:border-blue-900 hover:shadow-md transition-all duration-300"
               >
-                <div className="text-luxury-gold mb-6 flex justify-center">
+                <div className="text-red-600 mb-6 flex justify-center">
                   <feature.icon size={48} />
                 </div>
                 <h3 className="text-xl font-semibold text-luxury-navy mb-4">
@@ -211,7 +211,7 @@ const RSVPManagement = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-luxury-navy mb-4">
               Our Specialized Teams
             </h2>
-            <div className="w-20 h-1 bg-luxury-gold mx-auto mb-6"></div>
+            <div className="w-20 h-1 bg-blue-900 mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Each team is dedicated to making your wedding celebration flawless
               and memorable
@@ -294,9 +294,9 @@ const RSVPManagement = () => {
               >
                 <stat.icon
                   size={48}
-                  className="text-luxury-gold mx-auto mb-4"
+                  className="text-blue-900 mx-auto mb-4"
                 />
-                <div className="text-4xl font-bold text-luxury-navy mb-2">
+                <div className="text-4xl font-bold text-blue-900 mb-2">
                   {stat.number}
                 </div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
@@ -324,7 +324,7 @@ const RSVPManagement = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-luxury-gold hover:bg-luxury-darkGold text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-blue-900 hover:bg-white text-white hover:text-blue-900 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Plan Guest Experience
             </motion.button>
