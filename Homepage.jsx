@@ -69,11 +69,6 @@ const Homepage = () => {
         "Strategic planning and timeline execution for smooth event progression.",
     },
     {
-      image: Services_5,
-      title: "Innovations & Concepts",
-      description: "Creative and unique concepts to make your event memorable.",
-    },
-    {
       image: Services_6,
       title: "Entertainment",
       description:

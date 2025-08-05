@@ -19,9 +19,28 @@ import udaivillas_udaipur from "../../Assets/destination/udaivillas.jpg";
 import itcmaurya_delhi from "../../Assets/destination/itcmaurya_delhi.jpg";
 import theleelapalace_jaipur from "../../Assets/destination/jaipur/leelaplace_jaipur.jpg";
 import hyatt from "../../assets/destination/goa/hyatt.jpg";
-import taj from "../../assets/destination/jim_corbett/taj.jpg"; 
+import taj from "../../assets/destination/jim_corbett/taj.jpg";
 import umaid from "../../assets/destination/jodhpur/umaid.jpg";
 import surya from "../../assets/destination/jaisalmer/surya.jpg";
+import wildflower from "../../assets/destination/shimla/wildflower.jpg";
+import jw from "../../assets/destination/chandigarh/jw.jpg";
+import mussoorie_hyatt from "../../assets/destination/mussoorie/hyatt.jpg";
+import kumarakom from "../../assets/destination/kerala/kumarakom.jpg";
+import centric from "../../assets/destination/dehradun/centric.jpg";
+import westin from "../../assets/destination/hyderabad/westin.jpg";
+import roseate from "../../assets/destination/rishikesh/roseate.jpg";
+import vivanta from "../../assets/destination/guwahati/vivanta.jpg";
+import itc_chennai from "../../assets/destination/chennai/itc.jpg";
+import itc_ahmedabad from "../../assets/destination/ahemdabad/itc.jpg";
+import dusit from "../../assets/destination/hua_hin/dusit.jpg";
+import bab from "../../assets/destination/abu_dhabi/bab.jpg";
+import habtoor from "../../assets/destination/dubai/habtoor.jpg";
+import hilton from "../../assets/destination/phuket/hilton.jpg";
+import rafles from "../../assets/destination/singapore/rafles.jpg";
+import waldorf from "../../assets/destination/bangkok/waldorf.jpg";
+import jw_oman from "../../assets/destination/oman/jw.jpg";
+import mandarin from "../../assets/destination/qatar/mandarin.jpg";
+import jw_vietnam from "../../assets/destination/vietnam/jw.jpg";
 
 // Component to control the map view - flyTo animation
 const MapController = ({ center, zoom }) => {
@@ -130,8 +149,7 @@ const WorldMap = () => {
       lng: 78.0081,
       route: "/destinations/agra",
       color: "#f44336",
-      image:
-       amarvillas_agra,
+      image: amarvillas_agra,
     },
     {
       id: "jaipur",
@@ -142,8 +160,7 @@ const WorldMap = () => {
       lng: 75.7873,
       route: "/destinations/jaipur",
       color: "#e91e63",
-      image:
-        theleelapalace_jaipur,
+      image: theleelapalace_jaipur,
     },
     {
       id: "delhi",
@@ -154,8 +171,7 @@ const WorldMap = () => {
       lng: 77.1025,
       route: "/destinations/delhi",
       color: "#2196f3",
-      image:
-        itcmaurya_delhi,
+      image: itcmaurya_delhi,
     },
     {
       id: "udaipur",
@@ -166,8 +182,7 @@ const WorldMap = () => {
       lng: 73.7125,
       route: "/destinations/udaipur",
       color: "#4caf50",
-      image:
-        udaivillas_udaipur,
+      image: udaivillas_udaipur,
     },
     {
       id: "jodhpur",
@@ -178,8 +193,7 @@ const WorldMap = () => {
       lng: 73.0243,
       route: "/destinations/jodhpur",
       color: "#3f51b5",
-      image:
-        umaid,
+      image: umaid,
     },
     {
       id: "jaisalmer",
@@ -199,42 +213,18 @@ const WorldMap = () => {
       description: "City Beautiful - Modern venues with garden settings",
       lat: 30.7333,
       lng: 76.7794,
-      route: "/destinations",
+      route: "/destinations/chandigarh",
       color: "#8bc34a",
-      image:
-        "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: jw,
     },
-    {
-      id: "bangalore",
-      name: "Bangalore",
-      country: "India",
-      description: "Garden City - Modern venues with traditional charm",
-      lat: 12.9716,
-      lng: 77.5946,
-      route: "/destinations",
-      color: "#9c27b0",
-      image:
-        "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-    },
-    {
-      id: "kochi",
-      name: "Kochi",
-      country: "India",
-      description: "Queen of Arabian Sea - Coastal elegance and spice gardens",
-      lat: 9.9312,
-      lng: 76.2673,
-      route: "/destinations",
-      color: "#607d8b",
-      image:
-        "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-    },
+
     {
       id: "goa",
       name: "Goa",
       country: "India",
       description: "Beach weddings - Pristine shores and luxury resorts",
       lat: 15.2993,
-      lng: 74.1240,
+      lng: 74.124,
       route: "/destinations/goa",
       color: "#00bcd4",
       image: hyatt,
@@ -243,25 +233,26 @@ const WorldMap = () => {
       id: "jim-corbett",
       name: "Jim Corbett",
       country: "India",
-      description: "Wilderness weddings - Nature's grandeur and wildlife sanctuary",
+      description:
+        "Wilderness weddings - Nature's grandeur and wildlife sanctuary",
       lat: 29.3892,
       lng: 78.7636,
       route: "/destinations/jim-corbett",
       color: "#10b981",
-      image:
-        taj,
+      image: taj,
     },
     {
       id: "mussoorie",
       name: "Mussoorie",
       country: "India",
-      description: "Queen of the Hills - Majestic mountain views and luxury venues",
+      description:
+        "Queen of the Hills - Majestic mountain views and luxury venues",
       lat: 30.4598,
       lng: 78.0664,
       route: "/destinations/mussoorie",
       color: "#3b82f6",
       image:
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        mussoorie_hyatt,
     },
     {
       id: "shimla",
@@ -272,129 +263,207 @@ const WorldMap = () => {
       lng: 77.1734,
       route: "/destinations/shimla",
       color: "#8b5cf6",
-      image:
-        "https://images.unsplash.com/photo-1578774204375-826dc5d073f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: wildflower,
     },
     {
       id: "kerala",
       name: "Kerala",
       country: "India",
-      description: "God's Own Country - Backwater weddings with serene natural beauty",
+      description:
+        "God's Own Country - Backwater weddings with serene natural beauty",
       lat: 10.8505,
       lng: 76.2711,
       route: "/destinations/kerala",
       color: "#059669",
-      image:
-        "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: kumarakom,
+    },
+    {
+      id: "dehradun",
+      name: "Dehradun",
+      country: "India",
+      description: "Queen of Hills - Valley weddings with mountain charm",
+      lat: 30.3165,
+      lng: 78.0322,
+      route: "/destinations/dehradun",
+      color: "#16a085",
+      image: centric,
+    },
+    {
+      id: "hyderabad",
+      name: "Hyderabad",
+      country: "India",
+      description: "City of Nizams - Royal heritage and palace weddings",
+      lat: 17.3850,
+      lng: 78.4867,
+      route: "/destinations/hyderabad",
+      color: "#9b59b6",
+      image: westin,
+    },
+    {
+      id: "rishikesh",
+      name: "Rishikesh",
+      country: "India",
+      description: "Yoga Capital - Spiritual weddings by the holy Ganges",
+      lat: 30.0869,
+      lng: 78.2676,
+      route: "/destinations/rishikesh",
+      color: "#f39c12",
+      image: roseate,
+    },
+    {
+      id: "guwahati",
+      name: "Guwahati",
+      country: "India",
+      description: "Gateway to Northeast - Cultural fusion and river views",
+      lat: 26.1445,
+      lng: 91.7362,
+      route: "/destinations/guwahati",
+      color: "#1abc9c",
+      image: vivanta,
+    },
+    {
+      id: "chennai",
+      name: "Chennai",
+      country: "India",
+      description: "Detroit of India - Beach city with cultural heritage",
+      lat: 13.0827,
+      lng: 80.2707,
+      route: "/destinations/chennai",
+      color: "#3498db",
+      image: itc_chennai,
+    },
+    {
+      id: "ahmedabad",
+      name: "Ahmedabad",
+      country: "India",
+      description: "Heritage City - Vibrant Gujarati culture and luxury venues",
+      lat: 23.0225,
+      lng: 72.5714,
+      route: "/destinations/ahmedabad",
+      color: "#e67e22",
+      image: itc_ahmedabad,
     },
     {
       id: "huahin",
       name: "Hua Hin",
       country: "Thailand",
-      description: "Thai Summer Palaces - OG beach resort city with royal heritage",
+      description:
+        "Thai Summer Palaces - OG beach resort city with royal heritage",
       lat: 12.5684,
       lng: 99.9576,
       route: "/destinations/hua_hin",
       color: "#dc2626",
-      image:
-        "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-    },
-    {
-      id: "turkey",
-      name: "Istanbul",
-      country: "Turkey",
-      description:
-        "Where East meets West - Historic palaces and Bosphorus views",
-      lat: 41.0082,
-      lng: 28.9784,
-      route: "/destinations/turkey",
-      color: "#795548",
-      image:
-        "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-    },
-    {
-      id: "tokyo",
-      name: "Tokyo",
-      country: "Japan",
-      description:
-        "Modern metropolis - Cherry blossoms and contemporary elegance",
-      lat: 35.6762,
-      lng: 139.6503,
-      route: "/destinations",
-      color: "#e91e63",
-      image:
-        "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-    },
-    {
-      id: "nigeria",
-      name: "Lagos",
-      country: "Nigeria",
-      description:
-        "Vibrant cultural celebrations - Rich traditions and coastal beauty",
-      lat: 6.5244,
-      lng: 3.3792,
-      route: "/destinations",
-      color: "#4caf50",
-      image:
-        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: dusit,
     },
     {
       id: "abudhabi",
       name: "Abu Dhabi",
       country: "UAE",
-      description: "Hub of Destination Weddings - Modern luxury with Arabian elegance",
+      description:
+        "Hub of Destination Weddings - Modern luxury with Arabian elegance",
       lat: 24.4539,
       lng: 54.3773,
       route: "/destinations/abu_dhabi",
       color: "#d97706",
-      image:
-        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: bab,
     },
     {
       id: "dubai",
       name: "Dubai",
       country: "UAE",
-      description: "Arabian Sky Weddings - Perfect luxury with world-class tourism",
+      description:
+        "Arabian Sky Weddings - Perfect luxury with world-class tourism",
       lat: 25.2048,
       lng: 55.2708,
       route: "/destinations/dubai",
       color: "#eab308",
-      image:
-        "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: habtoor,
     },
     {
       id: "phuket",
       name: "Phuket",
       country: "Thailand",
-      description: "Ultimate Tropical Oasis - Paradise destination with white sand beaches",
+      description:
+        "Ultimate Tropical Oasis - Paradise destination with white sand beaches",
       lat: 7.8804,
       lng: 98.3923,
       route: "/destinations/phuket",
       color: "#14b8a6",
-      image:
-        "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: hilton,
     },
     {
-      id: "france",
-      name: "Paris",
-      country: "France",
-      description: "City of Love - Romantic châteaux and timeless elegance",
-      lat: 48.8566,
-      lng: 2.3522,
-      route: "/destinations/paris",
-      color: "#ff5722",
+      id: "singapore",
+      name: "Singapore",
+      country: "Singapore",
+      description: "Garden City - Modern luxury with tropical elegance",
+      lat: 1.3521,
+      lng: 103.8198,
+      route: "/destinations/singapore",
+      color: "#e74c3c",
+      image: rafles,
+    },
+    {
+      id: "bangkok",
+      name: "Bangkok",
+      country: "Thailand",
+      description: "City of Angels - Vibrant temples and luxury hospitality",
+      lat: 13.7563,
+      lng: 100.5018,
+      route: "/destinations/bangkok",
+      color: "#f1c40f",
+      image: waldorf,
+    },
+    {
+      id: "oman",
+      name: "Oman",
+      country: "Oman",
+      description: "Jewel of Arabia - Desert luxury and Arabian hospitality",
+      lat: 23.5859,
+      lng: 58.4059,
+      route: "/destinations/oman",
+      color: "#d35400",
       image:
-        "https://images.unsplash.com/photo-1502602898536-47ad22581b52?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        jw_oman,
+    },
+    {
+      id: "qatar",
+      name: "Qatar",
+      country: "Qatar",
+      description: "Modern Arabian Oasis - Futuristic luxury in the Gulf",
+      lat: 25.3548,
+      lng: 51.1839,
+      route: "/destinations/qatar",
+      color: "#8e44ad",
+      image: mandarin,
+    },
+    {
+      id: "vietnam",
+      name: "Vietnam",
+      country: "Vietnam",
+      description: "Timeless Beauty - Historic charm with coastal elegance",
+      lat: 14.0583,
+      lng: 108.2772,
+      route: "/destinations/vietnam",
+      color: "#27ae60",
+      image:
+        jw_vietnam,
     },
   ];
 
   const handleLocationClick = (destination) => {
-    console.log('🎯 Destination clicked:', destination.name, '-> Navigating to:', destination.route);
+    console.log(
+      "🎯 Destination clicked:",
+      destination.name,
+      "-> Navigating to:",
+      destination.route
+    );
     setSelectedDestination(destination);
     setClickedLocation(destination);
     setPersistentPopup(true);
     setHoveredLocation(null); // Clear hover state when clicked
 
+    // Scroll to top before navigation
+    window.scrollTo(0, 0);
     // Navigate immediately for direct marker clicks
     navigate(destination.route);
   };
@@ -419,9 +488,11 @@ const WorldMap = () => {
 
   const handleExploreClick = (destination) => {
     setSelectedDestination(destination);
+    // Scroll to top before navigation
+    window.scrollTo(0, 0);
     setTimeout(() => {
       navigate(destination.route);
-    }, 300);
+    }, 100);
   };
 
   // Create custom icons for map markers
@@ -514,31 +585,30 @@ const WorldMap = () => {
       {/* Interactive Map Section */}
       <section className="py-10 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
             className="text-center mb-10"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-luxury-navy mb-4">
               Interactive Destination Map
             </h2>
-            <div className="w-20 h-1 bg-luxury-gold mx-auto mb-6"></div>
+            <div className="w-20 h-1 bg-blue-900 mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-6">
               Explore our premium wedding destinations across India and around
               the world on our interactive map
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-2">
-              <div className="inline-flex items-center justify-center bg-luxury-gold/10 text-luxury-navy px-4 py-2 rounded-full text-sm">
-                <Star size={16} className="text-luxury-gold mr-2" />
-                <span>Click on any marker to instantly visit destination page</span>
+              <div className="inline-flex items-center justify-center bg-blue-900/10 text-luxury-navy px-4 py-2 rounded-full text-sm">
+                <Star size={16} className="text-blue-900 mr-2" />
+                <span>
+                  Click on any marker to instantly visit destination page
+                </span>
               </div>
               <div className="inline-flex items-center justify-center bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm">
                 <Globe size={16} className="text-blue-600 mr-2" />
                 <span>Discover destinations across multiple continents</span>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Map Container */}
           <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
@@ -607,7 +677,7 @@ const WorldMap = () => {
                           </p>
                           <button
                             onClick={() => handleExploreClick(destination)}
-                            className="mt-2 text-xs bg-luxury-gold hover:bg-luxury-darkGold text-white px-3 py-1 rounded-full w-full"
+                            className="mt-2 text-xs bg-blue-800 hover:bg-luxury-darkGold text-white px-3 py-1 rounded-full w-full"
                           >
                             Explore
                           </button>
@@ -620,11 +690,8 @@ const WorldMap = () => {
 
               {/* Enhanced Tooltip - positioned absolutely over the map */}
               {(hoveredLocation || (persistentPopup && clickedLocation)) && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8, y: 10 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.8, y: 10 }}
-                  className="absolute bg-white rounded-xl shadow-2xl border border-luxury-gold/20 z-[1000] overflow-hidden"
+                <div
+                  className="absolute bg-white rounded-xl shadow-2xl border border-blue-900/20 z-[1000] overflow-hidden transition-all duration-300"
                   style={{
                     right: "20px",
                     top: "70px", // Positioned below the zoom controls
@@ -638,15 +705,15 @@ const WorldMap = () => {
                       className="absolute top-2 right-2 z-10 bg-gray-100 hover:bg-gray-200 rounded-full p-1 transition-colors duration-200"
                       title="Close popup"
                     >
-                      <svg 
-                        xmlns="http://www.w3.org/2000/svg" 
-                        width="16" 
-                        height="16" 
-                        viewBox="0 0 24 24" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        strokeWidth="2" 
-                        strokeLinecap="round" 
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
                         strokeLinejoin="round"
                         className="text-gray-600"
                       >
@@ -659,21 +726,33 @@ const WorldMap = () => {
                   {/* Image header */}
                   <div
                     className="h-32 bg-cover bg-center relative"
-                    style={{ 
-                      backgroundImage: `url(${(persistentPopup && clickedLocation) ? clickedLocation.image : hoveredLocation?.image})` 
+                    style={{
+                      backgroundImage: `url(${
+                        persistentPopup && clickedLocation
+                          ? clickedLocation.image
+                          : hoveredLocation?.image
+                      })`,
                     }}
                   >
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute bottom-3 left-4 text-white">
                       <h3 className="font-bold text-lg">
-                        {(persistentPopup && clickedLocation) ? clickedLocation.name : hoveredLocation?.name}
+                        {persistentPopup && clickedLocation
+                          ? clickedLocation.name
+                          : hoveredLocation?.name}
                       </h3>
                       <p className="text-sm opacity-90">
-                        {(persistentPopup && clickedLocation) ? clickedLocation.country : hoveredLocation?.country}
+                        {persistentPopup && clickedLocation
+                          ? clickedLocation.country
+                          : hoveredLocation?.country}
                       </p>
                     </div>
-                    {!["India"].includes((persistentPopup && clickedLocation) ? clickedLocation.country : hoveredLocation?.country) && (
-                      <div className="absolute top-3 right-3 bg-luxury-gold text-white px-2 py-1 rounded-full text-xs font-medium flex items-center">
+                    {!["India"].includes(
+                      persistentPopup && clickedLocation
+                        ? clickedLocation.country
+                        : hoveredLocation?.country
+                    ) && (
+                      <div className="absolute top-3 right-3 bg-blue-900 text-white px-2 py-1 rounded-full text-xs font-medium flex items-center">
                         <Star size={12} className="mr-1" />
                         International
                       </div>
@@ -683,26 +762,37 @@ const WorldMap = () => {
                   {/* Content */}
                   <div className="p-4">
                     <p className="text-gray-700 mb-4 text-sm leading-relaxed">
-                      {(persistentPopup && clickedLocation) ? clickedLocation.description : hoveredLocation?.description}
+                      {persistentPopup && clickedLocation
+                        ? clickedLocation.description
+                        : hoveredLocation?.description}
                     </p>
-                    <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      onClick={() => handleExploreClick((persistentPopup && clickedLocation) ? clickedLocation : hoveredLocation)}
-                      className="w-full bg-gradient-to-r from-luxury-gold to-luxury-darkGold text-white px-4 py-2.5 rounded-lg text-sm font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                    <button
+                      onClick={() =>
+                        handleExploreClick(
+                          persistentPopup && clickedLocation
+                            ? clickedLocation
+                            : hoveredLocation
+                        )
+                      }
+                      className="w-full bg-gradient-to-r from-blue-900 to-blue-800 text-white px-4 py-2.5 rounded-lg text-sm font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2"
                     >
                       <Heart size={14} />
-                      <span>Explore {(persistentPopup && clickedLocation) ? clickedLocation.name : hoveredLocation?.name}</span>
-                    </motion.button>
-                    
+                      <span>
+                        Explore{" "}
+                        {persistentPopup && clickedLocation
+                          ? clickedLocation.name
+                          : hoveredLocation?.name}
+                      </span>
+                    </button>
+
                     {/* Additional interactive elements for persistent popup */}
                     {persistentPopup && clickedLocation && (
                       <div className="mt-3 pt-3 border-t border-gray-100">
                         <div className="flex items-center justify-between text-xs text-gray-500">
                           <span>Click to explore destination</span>
                           <div className="flex items-center space-x-1">
-                            <div 
-                              className="w-2 h-2 rounded-full" 
+                            <div
+                              className="w-2 h-2 rounded-full"
                               style={{ backgroundColor: clickedLocation.color }}
                             ></div>
                             <span>{clickedLocation.country}</span>
@@ -711,7 +801,7 @@ const WorldMap = () => {
                       </div>
                     )}
                   </div>
-                </motion.div>
+                </div>
               )}
             </div>
 
@@ -729,7 +819,9 @@ const WorldMap = () => {
                     <div className="w-3 h-3 rounded-full bg-[#ff5722] border border-white"></div>
                     <div className="absolute -top-1 -right-1 w-2 h-2 bg-yellow-400 rounded-full border border-white"></div>
                   </div>
-                  <span className="text-gray-700">International Destinations ⭐</span>
+                  <span className="text-gray-700">
+                    International Destinations ⭐
+                  </span>
                 </div>
               </div>
             </div>
@@ -740,46 +832,37 @@ const WorldMap = () => {
       {/* Destinations Grid */}
       <section className="py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-luxury-navy mb-4">
               Explore Our Destinations
             </h2>
-            <div className="w-20 h-1 bg-luxury-gold mx-auto mb-6"></div>
+            <div className="w-20 h-1 bg-blue-900 mx-auto mb-6"></div>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Discover our handpicked destinations across India and around the world for your perfect wedding celebration
+              Discover our handpicked destinations across India and around the
+              world for your perfect wedding celebration
             </p>
-          </motion.div>
+          </div>
 
           {/* Indian Destinations */}
           <div className="mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+            <div
               className="mb-8"
             >
               <h3 className="text-2xl md:text-3xl font-bold text-luxury-navy mb-4 text-center">
                 Indian Destinations
               </h3>
               <div className="w-16 h-1 bg-blue-500 mx-auto mb-6"></div>
-            </motion.div>
-            
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {destinations
-                .filter(destination => destination.country === "India")
+                .filter((destination) => destination.country === "India")
                 .map((destination, index) => (
-                  <motion.div
+                  <div
                     key={destination.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    whileHover={{ y: -10 }}
-                    className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:border-luxury-gold hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                    className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:border-blue-900 hover:shadow-xl transition-all duration-300 cursor-pointer group transform hover:-translate-y-2"
                     onClick={() => handleLocationClick(destination)}
                   >
                     {/* Image header */}
@@ -789,8 +872,12 @@ const WorldMap = () => {
                     >
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                       <div className="absolute bottom-4 left-4 text-white">
-                        <h3 className="text-xl font-bold">{destination.name}</h3>
-                        <p className="text-sm opacity-90">{destination.country}</p>
+                        <h3 className="text-xl font-bold">
+                          {destination.name}
+                        </h3>
+                        <p className="text-sm opacity-90">
+                          {destination.country}
+                        </p>
                       </div>
                     </div>
 
@@ -801,50 +888,43 @@ const WorldMap = () => {
                           style={{ backgroundColor: destination.color }}
                         />
                         <MapPin className="text-gray-400 mr-2" size={18} />
-                        <span className="text-gray-500 text-sm">Indian Destination</span>
+                        <span className="text-gray-500 text-sm">
+                          Indian Destination
+                        </span>
                       </div>
                       <p className="text-gray-600 mb-6">
                         {destination.description}
                       </p>
-                      <motion.button
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        className="w-full bg-luxury-gold/10 hover:bg-luxury-gold hover:text-white text-luxury-gold border border-luxury-gold rounded-lg py-3 font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
+                      <button
+                        className="w-full bg-blue-900/10 hover:bg-blue-900 hover:text-white text-blue-900 border border-blue-900 rounded-lg py-3 font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <Navigation size={18} />
                         <span>Explore {destination.name}</span>
-                      </motion.button>
+                      </button>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
             </div>
           </div>
 
           {/* International Destinations */}
           <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+            <div
               className="mb-8"
             >
               <h3 className="text-2xl md:text-3xl font-bold text-luxury-navy mb-4 text-center">
                 International Destinations
               </h3>
-              <div className="w-16 h-1 bg-luxury-gold mx-auto mb-6"></div>
-            </motion.div>
-            
+              <div className="w-16 h-1 bg-blue-900 mx-auto mb-6"></div>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {destinations
-                .filter(destination => destination.country !== "India")
+                .filter((destination) => destination.country !== "India")
                 .map((destination, index) => (
-                  <motion.div
+                  <div
                     key={destination.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    whileHover={{ y: -10 }}
-                    className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:border-luxury-gold hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                    className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:border-blue-900 hover:shadow-xl transition-all duration-300 cursor-pointer group transform hover:-translate-y-2"
                     onClick={() => handleLocationClick(destination)}
                   >
                     {/* Image header */}
@@ -858,7 +938,9 @@ const WorldMap = () => {
                           {destination.name}
                           <Star size={16} className="ml-2 text-yellow-400" />
                         </h3>
-                        <p className="text-sm opacity-90">{destination.country}</p>
+                        <p className="text-sm opacity-90">
+                          {destination.country}
+                        </p>
                       </div>
                       <div className="absolute top-4 right-4 bg-luxury-gold text-white px-3 py-1 rounded-full text-xs font-medium flex items-center">
                         <Star size={12} className="mr-1" />
@@ -873,21 +955,21 @@ const WorldMap = () => {
                           style={{ backgroundColor: destination.color }}
                         />
                         <MapPin className="text-gray-400 mr-2" size={18} />
-                        <span className="text-gray-500 text-sm">International Destination</span>
+                        <span className="text-gray-500 text-sm">
+                          International Destination
+                        </span>
                       </div>
                       <p className="text-gray-600 mb-6">
                         {destination.description}
                       </p>
-                      <motion.button
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        className="w-full bg-luxury-gold/10 hover:bg-luxury-gold hover:text-white text-luxury-gold border border-luxury-gold rounded-lg py-3 font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
+                      <button
+                        className="w-full bg-blue-900/10 hover:bg-blue-900 hover:text-white text-blue-900 border border-blue-900 rounded-lg py-3 font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <Navigation size={18} />
                         <span>Explore {destination.name}</span>
-                      </motion.button>
+                      </button>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
             </div>
           </div>

@@ -61,28 +61,32 @@ const Services = () => {
       title: 'Innovations & Concepts',
       description: 'Creative and unique concepts that transform your vision into extraordinary experiences.',
       features: ['Theme Development', 'Creative Design', 'Interactive Elements', 'Technology Integration'],
-      image: Services3
+      image: Services3,
+      link: '/services/innovations-and-concepts'
     },
     {
       icon: Music,
       title: 'Entertainment',
       description: 'Curated entertainment options to create memorable moments for your guests.',
       features: ['Live Performances', 'DJ Services', 'Interactive Entertainment', 'Cultural Performances'],
-      image: ServicesMain1
+      image: ServicesMain1,
+      link: '/services/entertainment'
     },
     {
       icon: UserCheck,
       title: 'Vendor Management',
       description: 'Professional vendor coordination and management for all your event needs.',
       features: ['Vendor Selection', 'Contract Management', 'Quality Control', 'Performance Monitoring'],
-      image: ServicesMain2
+      image: ServicesMain2,
+      link: '/services/vendor-management'
     },
     {
       icon: Gift,
       title: 'Wedding Favors & Giveaways',
       description: 'Thoughtful and personalized wedding favors that leave lasting impressions.',
       features: ['Custom Design', 'Bulk Ordering', 'Packaging Services', 'Personalization Options'],
-      image: Services1
+      image: Services1,
+      link: '/services/wedding-favours-giveaways'
     },
     {
       icon: MapPin,
@@ -174,6 +178,7 @@ const Services = () => {
                   {service.link ? (
                     <Link
                       to={service.link}
+                      onClick={() => window.scrollTo(0, 0)}
                       className="w-full bg-red-600/10 hover:bg-red-600 hover:text-white text-red-600 border border-red-600 rounded-lg py-2.5 font-semibold transition-all duration-300 text-sm inline-block text-center"
                     >
                       Learn More
@@ -230,31 +235,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-luxury-navy to-luxury-green">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-lg text-gray-200 mb-8 max-w-3xl mx-auto">
-              Let's discuss your upcoming event and create something extraordinary together.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                className="bg-blue-900 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Get Free Consultation
-              </button>
-              <button
-                className="border-2 border-white hover:bg-white hover:text-luxury-navy text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300"
-              >
-                View Portfolio
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+    
 
       <Footer />
     </div>

@@ -8,6 +8,7 @@ const Footer = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const destinations = [
+    // Indian Destinations
     { name: "Jaipur - Pink City Royal Weddings", link: "/destinations/jaipur" },
     {
       name: "Agra - Taj Mahal Destination Weddings",
@@ -15,10 +16,6 @@ const Footer = () => {
     },
     { name: "Udaipur - City of Lakes Weddings", link: "/destinations/udaipur" },
     { name: "Goa - Beach Destination Weddings", link: "/destinations/goa" },
-    {
-      name: "Abu Dhabi - Luxury Arabian Weddings",
-      link: "/destinations/abu_dhabi",
-    },
     {
       name: "Jim Corbett - Wildlife Resort Weddings",
       link: "/destinations/jim-corbett",
@@ -39,16 +36,70 @@ const Footer = () => {
       name: "Kerala - Backwater Paradise Weddings",
       link: "/destinations/kerala",
     },
-    {
-      name: "Hua Hin - Thai Royal Beach Weddings",
-      link: "/destinations/hua_hin",
-    },
-    { name: "Phuket - Tropical Island Weddings", link: "/destinations/phuket" },
-    { name: "Dubai - Modern Luxury Weddings", link: "/destinations/dubai" },
     { name: "Shimla - Colonial Hill Weddings", link: "/destinations/shimla" },
     {
       name: "Jaisalmer - Golden Desert Weddings",
       link: "/destinations/jaisalmer",
+    },
+    {
+      name: "Chandigarh - Garden City Weddings",
+      link: "/destinations/chandigarh",
+    },
+    {
+      name: "Dehradun - Valley Capital Weddings",
+      link: "/destinations/dehradun",
+    },
+    {
+      name: "Hyderabad - Nizami Heritage Weddings",
+      link: "/destinations/hyderabad",
+    },
+    {
+      name: "Rishikesh - Spiritual Riverside Weddings",
+      link: "/destinations/rishikesh",
+    },
+    {
+      name: "Guwahati - Gateway Northeast Weddings",
+      link: "/destinations/guwahati",
+    },
+    {
+      name: "Chennai - Cultural Capital Weddings",
+      link: "/destinations/chennai",
+    },
+    {
+      name: "Ahmedabad - Heritage City Weddings",
+      link: "/destinations/ahmedabad",
+    },
+
+    // International Destinations
+    {
+      name: "Hua Hin - Thai Royal Beach Weddings",
+      link: "/destinations/hua_hin",
+    },
+    {
+      name: "Abu Dhabi - Luxury Arabian Weddings",
+      link: "/destinations/abu_dhabi",
+    },
+    { name: "Phuket - Tropical Island Weddings", link: "/destinations/phuket" },
+    { name: "Dubai - Modern Luxury Weddings", link: "/destinations/dubai" },
+    {
+      name: "Singapore - Garden City Weddings",
+      link: "/destinations/singapore",
+    },
+    {
+      name: "Bangkok - Cultural Thai Weddings",
+      link: "/destinations/bangkok",
+    },
+    {
+      name: "Oman - Arabian Peninsula Weddings",
+      link: "/destinations/oman",
+    },
+    {
+      name: "Qatar - Pearl Gulf Weddings",
+      link: "/destinations/qatar",
+    },
+    {
+      name: "Vietnam - Southeast Asian Weddings",
+      link: "/destinations/vietnam",
     },
   ];
 
@@ -68,15 +119,6 @@ const Footer = () => {
       setIsDropdownOpen(false);
     }
   };
-
-  const quickLinks = [
-    { name: "About Us", link: "/about" },
-    { name: "Our Services", link: "/services" },
-    { name: "Destinations", link: "/destinations" },
-    { name: "Portfolio", link: "#portfolio" },
-    { name: "Testimonials", link: "#testimonials" },
-    { name: "Contact", link: "/contact" },
-  ];
 
   return (
     <>
@@ -107,31 +149,6 @@ const Footer = () => {
         <div className="relative z-10">
           {/* Main Footer Content */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-            {/* Quick Links */}
-            <div className="hidden space-y-4 md:flex flex-row justify-center items-center mb-10">
-              <ul className="flex flex-row space-x-10">
-                {quickLinks.map((link, index) => (
-                  <li key={index}>
-                    {link.link.startsWith("/") ? (
-                      <a
-                        href={link.link}
-                        className="text-gray-300 hover:text-luxury-gold transition-colors duration-300"
-                      >
-                        <span>{link.name}</span>
-                      </a>
-                    ) : (
-                      <a
-                        href={link.link}
-                        className="text-gray-300 hover:text-luxury-gold transition-colors duration-300"
-                      >
-                        <span>{link.name}</span>
-                      </a>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Company Info */}
               <motion.div
@@ -261,7 +278,7 @@ const Footer = () => {
                 className="space-y-6"
               >
                 <h4 className="text-xl font-semibold text-white">
-                  Our Services
+                  Quick Links
                 </h4>
                 <ul className="space-y-3">
                   <li>
@@ -272,7 +289,30 @@ const Footer = () => {
                       <span className="text-sm">Join Our Team</span>
                     </a>
                   </li>
-                  
+                  <li>
+                    <a
+                      href="/services"
+                      className="text-gray-300 hover:text-blue-500 transition-colors duration-300 flex items-center space-x-2"
+                    >
+                      <span className="text-sm">Services</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/contact"
+                      className="text-gray-300 hover:text-blue-500 transition-colors duration-300 flex items-center space-x-2"
+                    >
+                      <span className="text-sm">Contact Us</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/about"
+                      className="text-gray-300 hover:text-blue-500 transition-colors duration-300 flex items-center space-x-2"
+                    >
+                      <span className="text-sm">About Us</span>
+                    </a>
+                  </li>
                 </ul>
               </motion.div>
             </div>
