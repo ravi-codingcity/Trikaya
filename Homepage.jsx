@@ -12,14 +12,17 @@ import {
 import Navbar from "./src/Components/Navbar";
 import Footer from "./src/Components/Footer";
 import HeroSection from "./src/Components/HeroSection";
-import Banner1 from "./src/assets/Banner_1.jpg";
-import Banner2 from "./src/assets/Banner_2.jpg";
-import Banner3 from "./src/assets/Banner_3.jpg";
-import Banner4 from "./src/assets/Banner_4.jpg";
-import Services_1 from "./src/assets/Services_1.jpg";
-import Services_2 from "./src/assets/Services_2.jpg";
-import Services_3 from "./src/assets/Services_3.jpg";
-import Services_4 from "./src/assets/Services_4.jpg";
+import Portfolio_1 from "./src/assets/homepage/portfolio_1.jpg";
+import Portfolio_2 from "./src/assets/homepage/portfolio_2.jpeg";
+import Portfolio_3 from "./src/assets/homepage/portfolio_3.jpeg";
+import Portfolio_4 from "./src/assets/homepage/portfolio_4.jpeg";
+import Portfolio_6 from "./src/assets/homepage/portfolio_6.jpeg";
+import Services_rsvp from "./src/assets/homepage/rsvp.jpeg";
+import Services_hospitality from "./src/assets/homepage/hospitality.jpeg";
+import Services_corporate_event from "./src/assets/homepage/corporate_event.jpeg";
+import Services_event_management from "./src/assets/homepage/event_management.jpeg";
+import Services_entertainment from "./src/assets/homepage/entertainment.jpg";
+import Services_destination_venue from "./src/assets/homepage/destination_venue.jpeg";
 import Services_5 from "./src/assets/Services_5.jpg";
 import Services_6 from "./src/assets/Services_6.jpg";
 import Services_7 from "./src/assets/Services_7.jpg";
@@ -45,34 +48,38 @@ import testimonial_video_5 from "./src/assets/testimonials/testimonials_5.mp4";
 const Homepage = () => {
   const services = [
     {
-      image: Services_1,
+      image: Services_rsvp,
       title: "RSVP Management",
       description:
         "Seamless guest management and response tracking for your events.",
       link: "/services/rsvp-management",
     },
     {
-      image: Services_2,
+      image: Services_hospitality,
       title: "Hospitality Services",
       description:
         "Premium hospitality solutions to ensure your guests feel valued.",
+      link: "/services/hospitality-management",
     },
     {
-      image: Services_3,
+      image: Services_corporate_event,
       title: "Corporate Event",
       description: "Expert coordination to ensure your event runs flawlessly.",
+      link: "/services/corporate-event",
     },
     {
-      image: Services_4,
+      image: Services_event_management,
       title: "Event Flow & Management",
       description:
         "Strategic planning and timeline execution for smooth event progression.",
+      link: "/services/event-flow-management",
     },
     {
-      image: Services_6,
+      image: Services_entertainment,
       title: "Entertainment",
       description:
         "Curated performers and activities to captivate and delight your guests.",
+      link: "/services/entertainment",
     },
     {
       image: Services_7,
@@ -81,7 +88,7 @@ const Homepage = () => {
         "Coordinating with trusted suppliers to deliver exceptional quality and service.",
     },
     {
-      image: Services_8,
+      image: Services_destination_venue,
       title: "Destination & Venue",
       description:
         "Personalized keepsakes and custom gifts that reflect your style and gratitude.",
@@ -160,12 +167,12 @@ const Clients_logos = [
   ];
 
   const galleryImages = [
-    Banner1,
-    Banner2,
-    Banner3,
-    Banner4,
+    Portfolio_1,
+    Portfolio_2,
+    Portfolio_3,
+    Portfolio_4,
     Services_5, // Using the banners again for a fuller gallery
-    Services_6,
+    Portfolio_6,
   ];
 
   const whyChooseUs = [
@@ -217,8 +224,8 @@ const Clients_logos = [
               >
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10">
-                  <div className="text-luxury-gold transition-transform duration-300 flex justify-center">
-                    <img src={service.image} className="w-auto h-auto" />
+                  <div className="text-luxury-gold transition-transform duration-300 flex justify-center overflow-hidden">
+                    <img src={service.image} className="w-full h-48 object-cover rounded-t-xl" />
                   </div>
                   <div className="p-3">
                     <h3 className="text-lg font-semibold text-luxury-navy mb-4 ">

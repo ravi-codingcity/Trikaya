@@ -8,7 +8,9 @@ import ScrollToTop from "./Components/ScrollToTop";
 import Jaipur from "./Pages/Destinations_List/Jaipur";
 import Agra from "./Pages/Destinations_List/Agra";
 import WorldMap from "./Pages/Destinations_List/World_map";
-import RSVPManagement from "./Pages/Services/Hospitality_RSVP_management";
+import Hospitality_Management from "./Pages/Services/Hospitality_management";
+import RSVP_Management from "./Pages/Services/RSVP_management";
+import CorporateEvent from "./Pages/Services/Corporate_event";
 import "./App.css";
 import Udaipur from "./Pages/Destinations_List/Udaipur"; // Import Udaipur component
 import Goa from "./Pages/Destinations_List/Goa"; // Import Goa component
@@ -44,6 +46,7 @@ import InnovationsAndConcepts from "./Pages/Services/Innovations_and_concepts";
 import Entertainment from "./Pages/Services/Entertainment";
 import VendorManagement from "./Pages/Services/Vendor_management";
 import WeddingFavoursGiveaways from "./Pages/Services/Wedding_favours_giveaways";
+import StationeryAndInvites from "./Pages/Services/Stationery_and_invites";
 
 function App() {
   return (
@@ -64,7 +67,15 @@ function App() {
           <Route path="/destinations/map" element={<WorldMap />} />
           <Route
             path="/services/rsvp-management"
-            element={<RSVPManagement />}
+            element={<RSVP_Management />}
+          />
+          <Route
+            path="/services/hospitality-management"
+            element={<Hospitality_Management />}
+          />
+            <Route
+            path="/services/corporate-event"
+            element={<CorporateEvent />}
           />
           <Route path="/destinations/jim-corbett" element={<JimCorbett />} />
           <Route path="/destinations/mussoorie" element={<Mussoorie />} />
@@ -115,6 +126,10 @@ function App() {
           <Route
             path="/services/destinations-venue"
             element={<DestinationsVenue />}
+          />
+          <Route
+            path="/services/stationery-and-invites"
+            element={<StationeryAndInvites />}
           />
         </Routes>
         <ScrollToTop />

@@ -12,6 +12,8 @@ import {
 } from "lucide-react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import about_us_1 from "../Assets/about_us/about_us_1.jpeg";
+import about_us_2 from "../Assets/about_us/about_us_2.jpeg";
 import director_1 from "../Assets/director/ravi_verma.jpeg";
 import director_2 from "../Assets/director/azam.jpeg";
 import director_3 from "../Assets/director/bhupender.jpeg";
@@ -177,7 +179,7 @@ const team = [
             >
               <div className="relative z-10">
                 <img
-                  src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src={about_us_1}
                   alt="Luxury Event"
                   className="rounded-2xl shadow-2xl"
                 />
@@ -222,7 +224,7 @@ const team = [
               transition={{ duration: 0.8 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src={about_us_2}
                 alt="Our Story"
                 className="rounded-2xl shadow-2xl"
               />
